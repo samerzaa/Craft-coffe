@@ -8,35 +8,52 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Coffee-inspired color palette */
+    --background: 36 39% 97%;
+    --foreground: 25 25% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 36 39% 97%;
+    --card-foreground: 25 25% 15%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 36 39% 97%;
+    --popover-foreground: 25 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Rich coffee brown primary */
+    --primary: 25 60% 25%;
+    --primary-foreground: 36 39% 97%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Warm cream secondary */
+    --secondary: 36 50% 88%;
+    --secondary-foreground: 25 60% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Lighter coffee tones */
+    --muted: 36 40% 90%;
+    --muted-foreground: 25 30% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Golden accent */
+    --accent: 42 78% 65%;
+    --accent-foreground: 25 60% 25%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 36 39% 97%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 36 30% 85%;
+    --input: 36 30% 85%;
+    --ring: 25 60% 25%;
 
-    --radius: 0.5rem;
+    /* Coffee gradients */
+    --gradient-coffee: linear-gradient(135deg, hsl(25 60% 25%), hsl(20 55% 35%));
+    --gradient-cream: linear-gradient(135deg, hsl(36 50% 88%), hsl(42 45% 92%));
+    --gradient-hero: linear-gradient(135deg, hsl(25 60% 25%) 0%, hsl(20 55% 35%) 50%, hsl(42 78% 65%) 100%);
+    
+    /* Shadows */
+    --shadow-coffee: 0 10px 25px -5px hsl(25 60% 25% / 0.2);
+    --shadow-warm: 0 4px 15px -2px hsl(42 78% 65% / 0.3);
+    
+    /* Smooth transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
