@@ -1,17 +1,12 @@
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Coffee, Menu, Instagram, Facebook, Globe } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Coffee, Menu, Instagram, Facebook } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navigation = () => {
-  const [selectedLanguage, setSelectedLanguage] = useState("en");
-  
-  const languages = [
-    { code: "en", flag: "🇬🇧", name: "English" },
-    { code: "ar", flag: "🇸🇦", name: "العربية" },
-    { code: "fr", flag: "🇫🇷", name: "Français" }
-  ];
+  const { selectedLanguage, setSelectedLanguage, languages, getCurrentLanguage } = useLanguage();
 
   const navLinks = [
     { href: "#categories", label: "Categories" },
@@ -45,20 +40,26 @@ const Navigation = () => {
           {/* Language & Social Links */}
           <div className="hidden md:flex items-center space-x-4">
             {/* Language Selector */}
-            <div className="flex items-center space-x-1">
-              <Globe size={16} className="text-muted-foreground" />
-              {languages.map((lang) => (
-                <Button
-                  key={lang.code}
-                  variant={selectedLanguage === lang.code ? "secondary" : "ghost"}
-                  size="sm"
-                  onClick={() => setSelectedLanguage(lang.code)}
-                  className="text-sm px-2"
-                >
-                  {lang.flag}
-                </Button>
-              ))}
-            </div>
+            <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
+              <SelectTrigger className="w-[80px] h-8 bg-background/50 border-border/50">
+                <SelectValue>
+                  <div className="flex items-center space-x-1">
+                    <span className="text-sm">{getCurrentLanguage().flag}</span>
+                    <span className="text-sm font-medium">{getCurrentLanguage().code.toUpperCase()}</span>
+                  </div>
+                </SelectValue>
+              </SelectTrigger>
+              <SelectContent>
+                {languages.map((lang) => (
+                  <SelectItem key={lang.code} value={lang.code}>
+                    <div className="flex items-center space-x-2">
+                      <span>{lang.flag}</span>
+                      <span>{lang.name}</span>
+                    </div>
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
             
             {/* Social Links */}
             <div className="flex items-center space-x-2 border-l border-border pl-4">
@@ -78,19 +79,23 @@ const Navigation = () => {
           {/* Mobile Menu */}
           <div className="md:hidden flex items-center space-x-2">
             {/* Language Selector Mobile */}
-            <div className="flex items-center">
-              {languages.map((lang) => (
-                <Button
-                  key={lang.code}
-                  variant={selectedLanguage === lang.code ? "secondary" : "ghost"}
-                  size="sm"
-                  onClick={() => setSelectedLanguage(lang.code)}
-                  className="text-sm px-1"
-                >
-                  {lang.flag}
-                </Button>
-              ))}
-            </div>
+            <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
+              <SelectTrigger className="w-[60px] h-8 bg-background/50 border-border/50">
+                <SelectValue>
+                  <span className="text-sm">{getCurrentLanguage().flag}</span>
+                </SelectValue>
+              </SelectTrigger>
+              <SelectContent>
+                {languages.map((lang) => (
+                  <SelectItem key={lang.code} value={lang.code}>
+                    <div className="flex items-center space-x-2">
+                      <span>{lang.flag}</span>
+                      <span>{lang.name}</span>
+                    </div>
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
 
             <Sheet>
               <SheetTrigger asChild>
