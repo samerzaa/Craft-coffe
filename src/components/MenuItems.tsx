@@ -1,22 +1,24 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { menuData, MenuItem } from "@/data/menuData";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface MenuItemsProps {
   selectedCategory: string;
 }
 
 const MenuItems = ({ selectedCategory }: MenuItemsProps) => {
+  const { t } = useLanguage();
   const filteredItems = menuData.filter(item => item.category === selectedCategory);
   
   const getCategoryTitle = (category: string) => {
     const categoryMap: { [key: string]: string } = {
-      coffee: "☕ Premium Coffee Selection",
-      juices: "🥤 Fresh Juices & Smoothies",
-      desserts: "🍰 Delicious Desserts",
-      shisha: "💨 Premium Shisha Experience"
+      coffee: `☕ ${t("coffee")}`,
+      juices: `🥤 ${t("juices")}`,
+      desserts: `🍰 ${t("desserts")}`,
+      shisha: `💨 ${t("shisha")}`
     };
-    return categoryMap[category] || "Menu Items";
+    return categoryMap[category] || t("menu");
   };
 
   return (
@@ -40,7 +42,7 @@ const MenuItems = ({ selectedCategory }: MenuItemsProps) => {
               <div className="relative">
                 <img
                   src={item.image}
-                  alt={item.name}
+                  alt={t(item.nameKey)}
                   className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                 />
@@ -53,10 +55,10 @@ const MenuItems = ({ selectedCategory }: MenuItemsProps) => {
               
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-primary mb-2">
-                  {item.name}
+                  {t(item.nameKey)}
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
-                  {item.description}
+                  {t(item.descriptionKey)}
                 </p>
               </CardContent>
             </Card>

@@ -1,7 +1,9 @@
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const NotFound = () => {
+  const { t } = useLanguage();
   const location = useLocation();
 
   useEffect(() => {
@@ -15,15 +17,15 @@ const NotFound = () => {
     <div className="min-h-screen flex items-center justify-center bg-background">
       <div className="text-center max-w-md mx-auto px-4">
         <div className="text-8xl mb-6">☕</div>
-        <h1 className="text-4xl font-bold mb-4 text-primary">404</h1>
+        <h1 className="text-4xl font-bold mb-4 text-primary">{t("pageNotFound")}</h1>
         <p className="text-xl text-muted-foreground mb-8">
-          Oops! This page seems to have gone for a coffee break
+          {t("pageNotFoundDesc")}
         </p>
         <a 
           href="/" 
           className="inline-flex items-center justify-center rounded-md bg-primary text-primary-foreground px-6 py-3 font-medium hover:bg-primary/90 transition-colors"
         >
-          Return to Home
+          {t("backToHome")}
         </a>
       </div>
     </div>

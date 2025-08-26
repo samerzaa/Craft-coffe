@@ -1,5 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { categories } from "@/data/menuData";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface CategoriesProps {
   selectedCategory: string;
@@ -7,15 +8,16 @@ interface CategoriesProps {
 }
 
 const Categories = ({ selectedCategory, onCategorySelect }: CategoriesProps) => {
+  const { t } = useLanguage();
   return (
     <section id="categories" className="py-16 bg-gradient-cream">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
-            Our Menu Categories
+            {t("categories")}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Discover our carefully curated selection of beverages, treats, and experiences
+            {t("landingSubtitle")}
           </p>
         </div>
         
@@ -35,7 +37,7 @@ const Categories = ({ selectedCategory, onCategorySelect }: CategoriesProps) => 
                   {category.emoji}
                 </div>
                 <h3 className="text-lg font-semibold">
-                  {category.name}
+                  {t(category.nameKey)}
                 </h3>
               </CardContent>
             </Card>

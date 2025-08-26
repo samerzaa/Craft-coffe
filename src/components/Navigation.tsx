@@ -6,12 +6,12 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const Navigation = () => {
-  const { selectedLanguage, setSelectedLanguage, languages, getCurrentLanguage } = useLanguage();
+  const { selectedLanguage, setSelectedLanguage, languages, getCurrentLanguage, t } = useLanguage();
 
   const navLinks = [
-    { href: "#categories", label: "Categories" },
-    { href: "#menu", label: "Menu" },
-    { href: "#footer", label: "Contact" }
+    { href: "#categories", label: t("categories") },
+    { href: "#menu", label: t("menu") },
+    { href: "#footer", label: t("contact") }
   ];
 
   return (

@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Coffee } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 import heroImage from "@/assets/coffee-hero.jpg";
 
 const Landing = () => {
+  const { t } = useLanguage();
   return (
     <div className="min-h-screen relative overflow-hidden">
       {/* Hero Background */}
@@ -26,12 +28,12 @@ const Landing = () => {
           
           {/* Main Heading */}
           <h1 className="text-6xl md:text-8xl font-bold text-primary-foreground mb-6 tracking-tight">
-            BrewScape
+            {t("landingTitle")}
           </h1>
           
           {/* Slogan */}
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-12 font-light">
-            Where every cup tells a story of passion and perfection
+            {t("landingSlogan")}
           </p>
           
           {/* CTA Button */}
@@ -41,7 +43,7 @@ const Landing = () => {
               size="lg" 
               className="text-lg px-8 py-6 rounded-full hover:scale-105"
             >
-              Explore Our Menu
+              {t("exploreMenu")}
             </Button>
           </Link>
         </div>

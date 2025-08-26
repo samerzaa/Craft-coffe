@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, ReactNode } from 'react';
+import { translations } from '@/data/translations';
 
 export interface Language {
   code: string;
@@ -11,6 +12,7 @@ interface LanguageContextType {
   setSelectedLanguage: (language: string) => void;
   languages: Language[];
   getCurrentLanguage: () => Language;
+  t: (key: string) => string;
 }
 
 const languages: Language[] = [
@@ -40,12 +42,17 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     return languages.find(lang => lang.code === selectedLanguage) || languages[0];
   };
 
+  const t = (key: string): string => {
+    return translations[selectedLanguage as keyof typeof translations]?.[key as keyof typeof translations.en] || key;
+  };
+
   return (
     <LanguageContext.Provider value={{
       selectedLanguage,
       setSelectedLanguage,
       languages,
-      getCurrentLanguage
+      getCurrentLanguage,
+      t
     }}>
       {children}
     </LanguageContext.Provider>

@@ -1,7 +1,9 @@
 import { Coffee, MapPin, Clock, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Footer = () => {
+  const { t } = useLanguage();
   return (
     <footer id="footer" className="bg-primary text-primary-foreground py-16">
       <div className="container mx-auto px-4">
