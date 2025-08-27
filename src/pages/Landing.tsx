@@ -27,12 +27,12 @@ const Landing = () => {
           </div>
           
           {/* Main Heading */}
-          <h1 className="text-6xl md:text-8xl font-bold text-primary-foreground mb-6 tracking-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-primary-foreground mb-6 tracking-tight">
             {t("landingTitle")}
           </h1>
           
           {/* Slogan */}
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-12 font-light">
+          <p className="text-lg sm:text-xl md:text-2xl text-primary-foreground/90 mb-8 sm:mb-12 font-light max-w-3xl mx-auto">
             {t("landingSlogan")}
           </p>
           
@@ -41,7 +41,7 @@ const Landing = () => {
             <Button 
               variant="hero"
               size="lg" 
-              className="text-lg px-8 py-6 rounded-full hover:scale-105"
+              className="text-base sm:text-lg px-6 sm:px-8 py-4 sm:py-6 rounded-full hover:scale-105 transition-transform"
             >
               {t("exploreMenu")}
             </Button>

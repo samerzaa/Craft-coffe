@@ -7,14 +7,14 @@ const Footer = () => {
   return (
     <footer id="footer" className="bg-primary text-primary-foreground py-16">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           {/* About Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2 mb-6">
               <Coffee size={24} />
               <span className="text-2xl font-bold">BrewScape</span>
             </div>
-            <p className="text-primary-foreground/80 leading-relaxed">
+            <p className="text-primary-foreground/80 leading-relaxed text-sm sm:text-base">
               At BrewScape, we're passionate about crafting the perfect coffee experience. 
               From our carefully selected beans to our artisanal brewing methods, 
               every cup is a journey of flavor and tradition.
@@ -28,7 +28,7 @@ const Footer = () => {
 
           {/* Contact Information */}
           <div className="space-y-6">
-            <h3 className="text-xl font-bold mb-6">Contact Information</h3>
+            <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6">Contact Information</h3>
             
             <div className="space-y-4">
               <div className="flex items-start space-x-3">
@@ -74,8 +74,8 @@ const Footer = () => {
 
           {/* Map Section */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold mb-6">Find Us</h3>
-            <div className="bg-secondary/10 rounded-lg overflow-hidden h-64">
+            <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6">Find Us</h3>
+            <div className="bg-secondary/10 rounded-lg overflow-hidden h-48 sm:h-64">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.1449!2d46.6752957!3d24.7135517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2s!4v1635000000000!5m2!1sen!2s"
                 width="100%"

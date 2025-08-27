@@ -33,7 +33,7 @@ const MenuItems = ({ selectedCategory }: MenuItemsProps) => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {filteredItems.map((item: MenuItem) => (
             <Card 
               key={item.id} 
@@ -43,7 +43,7 @@ const MenuItems = ({ selectedCategory }: MenuItemsProps) => {
                 <img
                   src={item.image}
                   alt={t(item.nameKey)}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-40 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                 />
                 <div className="absolute top-4 right-4">
@@ -53,11 +53,11 @@ const MenuItems = ({ selectedCategory }: MenuItemsProps) => {
                 </div>
               </div>
               
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-primary mb-2">
+              <CardContent className="p-4 sm:p-6">
+                <h3 className="text-lg sm:text-xl font-bold text-primary mb-2">
                   {t(item.nameKey)}
                 </h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">
+                <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
                   {t(item.descriptionKey)}
                 </p>
               </CardContent>

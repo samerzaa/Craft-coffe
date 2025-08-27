@@ -21,7 +21,7 @@ const Categories = ({ selectedCategory, onCategorySelect }: CategoriesProps) => 
           </p>
         </div>
         
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 max-w-4xl mx-auto">
           {categories.map((category) => (
             <Card
               key={category.id}
@@ -32,11 +32,11 @@ const Categories = ({ selectedCategory, onCategorySelect }: CategoriesProps) => 
               }`}
               onClick={() => onCategorySelect(category.id)}
             >
-              <CardContent className="flex flex-col items-center justify-center p-8 text-center">
-                <div className="text-5xl mb-4">
+              <CardContent className="flex flex-col items-center justify-center p-4 sm:p-6 md:p-8 text-center">
+                <div className="text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-4">
                   {category.emoji}
                 </div>
-                <h3 className="text-lg font-semibold">
+                <h3 className="text-sm sm:text-base md:text-lg font-semibold">
                   {t(category.nameKey)}
                 </h3>
               </CardContent>
