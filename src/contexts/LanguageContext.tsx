@@ -3,7 +3,6 @@ import { translations } from '@/data/translations';
 
 export interface Language {
   code: string;
-  flag: string;
   name: string;
 }
 
@@ -16,9 +15,9 @@ interface LanguageContextType {
 }
 
 const languages: Language[] = [
-  { code: "en", flag: "🇬🇧", name: "English" },
-  { code: "ar", flag: "🇸🇦", name: "العربية" },
-  { code: "fr", flag: "🇫🇷", name: "Français" }
+  { code: "en", name: "English" },
+  { code: "ar", name: "العربية" },
+  { code: "fr", name: "Français" }
 ];
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
@@ -45,6 +44,13 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
   const t = (key: string): string => {
     return translations[selectedLanguage as keyof typeof translations]?.[key as keyof typeof translations.en] || key;
   };
+
+  // Update document direction and language
+  React.useEffect(() => {
+    const isRTL = selectedLanguage === 'ar';
+    document.documentElement.dir = isRTL ? 'rtl' : 'ltr';
+    document.documentElement.lang = selectedLanguage;
+  }, [selectedLanguage]);
 
   return (
     <LanguageContext.Provider value={{

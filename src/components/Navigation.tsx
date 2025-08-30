@@ -1,9 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Coffee, Menu, Instagram, Facebook } from "lucide-react";
+import { Coffee, Menu} from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram , faFacebook } from "@fortawesome/free-brands-svg-icons";
+import uk from "@/assets/uk.webp";
+import france from "@/assets/france.webp";
+import tunisia from "@/assets/tunisia.webp";
 
 const Navigation = () => {
   const { selectedLanguage, setSelectedLanguage, languages, getCurrentLanguage, t } = useLanguage();
@@ -13,19 +18,31 @@ const Navigation = () => {
     { href: "#menu", label: t("menu") },
     { href: "#footer", label: t("contact") }
   ];
+  const getFlagIcon = () => {
+    switch (languages.find(lang => lang.code === selectedLanguage)?.code) {
+      case 'en':
+        return uk;
+      case 'fr':
+        return france;
+      case 'ar':
+        return tunisia;
+      default:
+        return uk;
+    }
+  };
 
   return (
     <nav className="bg-background/95 backdrop-blur-sm border-b border-border sticky top-0 z-50 shadow-sm">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className={`flex items-center justify-between h-16 ${selectedLanguage === 'ar' ? 'flex-row-reverse' : ''}`}>
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <Coffee className="text-primary" size={24} />
-            <span className="text-xl font-bold text-primary">BrewScape</span>
+            <span className="text-xl font-bold text-primary">NOUR</span>
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className={`hidden md:flex items-center ${selectedLanguage === 'ar' ? 'space-x-reverse space-x-8' : 'space-x-8'}`}>
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -41,10 +58,10 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-4">
             {/* Language Selector */}
             <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
-              <SelectTrigger className="w-[80px] h-8 bg-background/50 border-border/50">
+              <SelectTrigger className="w-full h-8 bg-background/50 border-border/50">
                 <SelectValue>
                   <div className="flex items-center space-x-1">
-                    <span className="text-sm">{getCurrentLanguage().flag}</span>
+                    <img src={getFlagIcon()} alt="Language flag" className="h-4 w-4 mr-1 object-cover rounded-sm" />
                     <span className="text-sm font-medium">{getCurrentLanguage().code.toUpperCase()}</span>
                   </div>
                 </SelectValue>
@@ -53,7 +70,6 @@ const Navigation = () => {
                 {languages.map((lang) => (
                   <SelectItem key={lang.code} value={lang.code}>
                     <div className="flex items-center space-x-2">
-                      <span>{lang.flag}</span>
                       <span>{lang.name}</span>
                     </div>
                   </SelectItem>
@@ -64,75 +80,141 @@ const Navigation = () => {
             {/* Social Links */}
             <div className="flex items-center space-x-2 border-l border-border pl-4">
               <Button variant="ghost" size="sm" asChild>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                  <Instagram size={16} />
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faInstagram} />
                 </a>
               </Button>
               <Button variant="ghost" size="sm" asChild>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                  <Facebook size={16} />
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={faFacebook} />
                 </a>
               </Button>
             </div>
           </div>
 
           {/* Mobile Menu */}
-          <div className="md:hidden flex items-center space-x-2">
-            {/* Language Selector Mobile */}
-            <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
-              <SelectTrigger className="w-[60px] h-8 bg-background/50 border-border/50">
-                <SelectValue>
-                  <span className="text-sm">{getCurrentLanguage().flag}</span>
-                </SelectValue>
-              </SelectTrigger>
-              <SelectContent>
-                {languages.map((lang) => (
-                  <SelectItem key={lang.code} value={lang.code}>
-                    <div className="flex items-center space-x-2">
-                      <span>{lang.flag}</span>
-                      <span>{lang.name}</span>
+          <div className="md:hidden flex items-center space-x-4">
+            {selectedLanguage === 'ar' ? (
+              <>
+                {/* Arabic: Menu Button first, then Language Selector */}
+                <Sheet>
+                  <SheetTrigger asChild>
+                    <Button variant="ghost" size="sm">
+                      <Menu size={20} />
+                    </Button>
+                  </SheetTrigger>
+                  <SheetContent side="left" className="w-80">
+                    <div className="flex flex-col space-y-6 mt-8">
+                      <Link to="/" className="flex items-center space-x-reverse space-x-2">
+                        <Coffee className="text-primary" size={24} />
+                        <span className="text-xl font-bold text-primary">NOUR</span>
+                      </Link>
+                      
+                      <div className="flex flex-col space-y-4">
+                        {navLinks.map((link) => (
+                          <a
+                            key={link.href}
+                            href={link.href}
+                            className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+                          >
+                            {link.label}
+                          </a>
+                        ))}
+                      </div>
+                      
+                      <div className="flex items-center space-x-reverse space-x-5 pt-4 border-t border-border">
+                        <a href="#" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                          <FontAwesomeIcon icon={faInstagram} size="2x"/>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                          <FontAwesomeIcon icon={faFacebook} size="2x"/>
+                        </a>
+                      </div>
                     </div>
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
+                  </SheetContent>
+                </Sheet>
 
-            <Sheet>
-              <SheetTrigger asChild>
-                <Button variant="ghost" size="sm">
-                  <Menu size={20} />
-                </Button>
-              </SheetTrigger>
-              <SheetContent side="right" className="w-80">
-                <div className="flex flex-col space-y-6 mt-8">
-                  <Link to="/" className="flex items-center space-x-2">
-                    <Coffee className="text-primary" size={24} />
-                    <span className="text-xl font-bold text-primary">BrewScape</span>
-                  </Link>
-                  
-                  <div className="flex flex-col space-y-4">
-                    {navLinks.map((link) => (
-                      <a
-                        key={link.href}
-                        href={link.href}
-                        className="text-lg font-medium text-foreground hover:text-primary transition-colors"
-                      >
-                        {link.label}
-                      </a>
+                <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
+                  <SelectTrigger className="w-full h-8 border-border/50">
+                    <SelectValue>
+                      <div className="flex items-center space-x-reverse space-x-1">
+                        <img src={getFlagIcon()} alt="Language flag" className="h-4 w-4 ml-1 object-cover rounded-sm" />
+                        <span className="text-sm font-medium">{getCurrentLanguage().code.toUpperCase()}</span>
+                      </div>
+                    </SelectValue>
+                  </SelectTrigger>
+                  <SelectContent>
+                    {languages.map((lang) => (
+                      <SelectItem key={lang.code} value={lang.code} >
+                        <div className="flex items-center space-x-reverse space-x-2">
+                          <span>{lang.name}</span>
+                        </div>
+                      </SelectItem>
                     ))}
-                  </div>
-                  
-                  <div className="flex items-center space-x-4 pt-4 border-t border-border">
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-                      <Instagram className="text-muted-foreground hover:text-primary transition-colors" size={24} />
-                    </a>
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                      <Facebook className="text-muted-foreground hover:text-primary transition-colors" size={24} />
-                    </a>
-                  </div>
-                </div>
-              </SheetContent>
-            </Sheet>
+                  </SelectContent>
+                </Select>
+              </>
+            ) : (
+              <>
+                {/* English/French: Language Selector first, then Menu Button */}
+                <Select value={selectedLanguage} onValueChange={setSelectedLanguage}>
+                  <SelectTrigger className="w-full h-8 border-border/50">
+                    <SelectValue>
+                      <div className="flex items-center space-x-1">
+                        <img src={getFlagIcon()} alt="Language flag" className="h-4 w-4 mr-1 object-cover rounded-sm" />
+                        <span className="text-sm font-medium">{getCurrentLanguage().code.toUpperCase()}</span>
+                      </div>
+                    </SelectValue>
+                  </SelectTrigger>
+                  <SelectContent>
+                    {languages.map((lang) => (
+                      <SelectItem key={lang.code} value={lang.code} >
+                        <div className="flex items-center space-x-2">
+                          <span>{lang.name}</span>
+                        </div>
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+
+                <Sheet>
+                  <SheetTrigger asChild>
+                    <Button variant="ghost" size="sm">
+                      <Menu size={20} />
+                    </Button>
+                  </SheetTrigger>
+                  <SheetContent side="right" className="w-80">
+                    <div className="flex flex-col space-y-6 mt-8">
+                      <Link to="/" className="flex items-center space-x-2">
+                        <Coffee className="text-primary" size={24} />
+                        <span className="text-xl font-bold text-primary">NOUR</span>
+                      </Link>
+                      
+                      <div className="flex flex-col space-y-4">
+                        {navLinks.map((link) => (
+                          <a
+                            key={link.href}
+                            href={link.href}
+                            className="text-lg font-medium text-foreground hover:text-primary transition-colors"
+                          >
+                            {link.label}
+                          </a>
+                        ))}
+                      </div>
+                      
+                      <div className="flex items-center space-x-5 pt-4 border-t border-border">
+                        <a href="#" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                          <FontAwesomeIcon icon={faInstagram} size="2x"/>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                          <FontAwesomeIcon icon={faFacebook} size="2x"/>
+                        </a>
+                      </div>
+                    </div>
+                  </SheetContent>
+                </Sheet>
+              </>
+            )}
           </div>
         </div>
       </div>

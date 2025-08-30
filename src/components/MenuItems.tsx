@@ -29,11 +29,11 @@ const MenuItems = ({ selectedCategory }: MenuItemsProps) => {
             {getCategoryTitle(selectedCategory)}
           </h2>
           <p className="text-lg text-muted-foreground">
-            Crafted with love and served with passion
+            {t("craftedWithLove")}
           </p>
         </div>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {filteredItems.map((item: MenuItem) => (
             <Card 
               key={item.id} 
@@ -68,7 +68,7 @@ const MenuItems = ({ selectedCategory }: MenuItemsProps) => {
         {filteredItems.length === 0 && (
           <div className="text-center py-12">
             <p className="text-lg text-muted-foreground">
-              No items available in this category yet.
+              {t("noItemsAvailable")}
             </p>
           </div>
         )}
