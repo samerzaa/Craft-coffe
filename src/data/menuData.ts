@@ -20,7 +20,7 @@ export const menuData: MenuItem[] = [
     id: 1,
     nameKey: "espresso",
     descriptionKey: "espressoDesc",
-    price: 12,
+    price: 2,
     image: espressoImg,
     category: "coffee"
   },
@@ -28,7 +28,7 @@ export const menuData: MenuItem[] = [
     id: 2,
     nameKey: "cappuccino",
     descriptionKey: "cappuccinoDesc",
-    price: 18,
+    price: 2,
     image: cappuccinoImg,
     category: "coffee"
   },
@@ -36,7 +36,7 @@ export const menuData: MenuItem[] = [
     id: 3,
     nameKey: "latte",
     descriptionKey: "latteDesc",
-    price: 20,
+    price: 2.5,
     image: latteImg,
     category: "coffee"
   },

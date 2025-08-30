@@ -48,7 +48,7 @@ const MenuItems = ({ selectedCategory }: MenuItemsProps) => {
                 />
                 <div className="absolute top-4 right-4">
                   <Badge className="bg-accent text-accent-foreground font-semibold">
-                    {item.price} SAR
+                    {item.price} DT
                   </Badge>
                 </div>
               </div>
