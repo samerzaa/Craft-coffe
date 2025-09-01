@@ -1,4 +1,4 @@
-import { Coffee, MapPin, Clock, Phone, Mail, X, Instagram, Facebook } from "lucide-react";
+import { Coffee, Clock, Phone, Mail, X, Instagram, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
@@ -11,14 +11,14 @@ const Footer = () => {
   const closeSocialModal = () => setIsSocialModalOpen(false);
 
   return (
-    <footer id="footer" className="bg-primary text-primary-foreground py-16">
+    <footer id="footer" className="bg-primary text-primary-foreground py-8">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
           {/* About Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2 mb-6">
               <Coffee size={24} />
-              <span className="text-2xl font-bold">NOUR</span>
+              <span className="text-2xl font-bold">CRAFT</span>
             </div>
             <p>{t("footerDescription")}</p>
             <div className="flex items-center space-x-4 pt-4">
@@ -35,26 +35,13 @@ const Footer = () => {
           {/* Contact Information */}
           <div className="space-y-6">
             <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6">{t("contactInformation")}</h3>
-            
             <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <MapPin size={20} className="text-accent mt-1 flex-shrink-0" />
-                <div>
-                  <p className="font-medium">{t("visitUs")}</p>
-                  <a href="https://maps.app.goo.gl/JaNkd1GeW4geoHSN9" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 text-sm space-y-1 hover:font-medium">
-                  VR4R+62C, Houmt Souk, Djerba
-                  </a>
-                </div>
-              </div>
-
               <div className="flex items-start space-x-3">
                 <Clock size={20} className="text-accent mt-1 flex-shrink-0" />
                 <div>
                   <p className="font-medium">{t("workingHours")}</p>
                   <div className="text-primary-foreground/80 text-sm space-y-1">
-                    <p>Mon - Thu: 7:00 AM - 11:00 PM</p>
-                    <p>Fri - Sat: 7:00 AM - 12:00 AM</p>
-                    <p>Sunday: 8:00 AM - 10:00 PM</p>
+                    <p>{t("AllDays")}: 7:00 AM - 00:00 PM</p>
                   </div>
                 </div>
               </div>
@@ -72,7 +59,7 @@ const Footer = () => {
                 <div>
                   <p className="font-medium">{t("email")}</p>
                   <a href="#" target="_blank" rel="noopener noreferrer" className="text-primary-foreground/80 text-sm space-y-1 hover:font-medium">
-                  info@Nour.com
+                  info@Craft.com
                 </a>
                 </div>
               </div>
@@ -80,27 +67,27 @@ const Footer = () => {
           </div>
 
           {/* Map Section */}
-          <div className="space-y-4">
+          <div className="space-y-4 col-span-2 lg:col-span-1">
             <h3 className="text-lg sm:text-xl font-bold mb-4 sm:mb-6">{t("findUs")}</h3>
             <div className="bg-secondary/10 rounded-lg overflow-hidden h-48 sm:h-64">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6626.646020784397!2d10.836069861536965!3d33.85556547976586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13aaa5002185e1fb%3A0x7476e6c978580e24!2sCaf%C3%A9%20Nour!5e0!3m2!1sfr!2stn!4v1756319491162!5m2!1sfr!2stn"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d105988.30577204307!2d10.786519258203121!3d33.886188300000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13aaa5d9a925820b%3A0xc8714f5292733f82!2sCRAFT%20Food%20%26%20Drinks!5e0!3m2!1sfr!2stn!4v1756728873721!5m2!1sfr!2stn"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="NOUR Location"
+                title="Craft Location"
               />
             </div>
           </div>
         </div>
 
         {/* Footer Bottom */}
-        <div className="border-t border-primary-foreground/20 mt-12 pt-8 text-center">
+        <div className="border-t border-primary-foreground/20 mt-12 pt-4 text-center">
           <p className="text-primary-foreground/60 text-sm">
-            © 2024 NOUR. {t("allRightsReserved")}.
+            © 2024 Craft. {t("allRightsReserved")}.
           </p>
         </div>
       </div>
@@ -130,7 +117,7 @@ const Footer = () => {
               
               {/* Instagram */}
               <a
-                href="https://instagram.com/nour_coffee"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center space-x-4 p-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-xl hover:from-pink-600 hover:to-purple-700 transition-all duration-300 hover:scale-105 hover:shadow-lg group"
@@ -138,13 +125,13 @@ const Footer = () => {
                 <Instagram size={32} className="group-hover:scale-110 transition-transform duration-300" />
                 <div className="text-left">
                   <div className="font-semibold text-lg">{t("instagram")}</div>
-                  <div className="text-pink-100 text-sm">@nour_coffee</div>
+                  <div className="text-pink-100 text-sm">@Craft_coffee</div>
                 </div>
               </a>
 
               {/* Facebook */}
               <a
-                href="https://facebook.com/nourcoffee"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center space-x-4 p-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 hover:scale-105 hover:shadow-lg group"
@@ -152,7 +139,7 @@ const Footer = () => {
                 <Facebook size={32} className="group-hover:scale-110 transition-transform duration-300" />
                 <div className="text-left">
                   <div className="font-semibold text-lg">{t("facebook")}</div>
-                  <div className="text-blue-100 text-sm">Nour Coffee</div>
+                  <div className="text-blue-100 text-sm">Craft Coffee</div>
                 </div>
               </a>
             </div>

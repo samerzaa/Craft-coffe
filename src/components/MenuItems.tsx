@@ -1,5 +1,4 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import { menuData, MenuItem } from "@/data/menuData";
 import { useLanguage } from "@/contexts/LanguageContext";
 
@@ -16,7 +15,7 @@ const MenuItems = ({ selectedCategory }: MenuItemsProps) => {
       coffee: `☕ ${t("coffee")}`,
       juices: `🥤 ${t("juices")}`,
       desserts: `🍰 ${t("desserts")}`,
-      shisha: `💨 ${t("shisha")}`
+      drinks: `💨 ${t("drinks")}`
     };
     return categoryMap[category] || t("menu");
   };
@@ -43,22 +42,17 @@ const MenuItems = ({ selectedCategory }: MenuItemsProps) => {
                 <img
                   src={item.image}
                   alt={t(item.nameKey)}
-                  className="w-full h-40 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-30 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                 />
-                <div className="absolute top-4 right-4">
-                  <Badge className="bg-accent text-accent-foreground font-semibold">
-                    {item.price} DT
-                  </Badge>
-                </div>
               </div>
               
-              <CardContent className="p-4 sm:p-6">
+              <CardContent className="p-4 sm:p-6 text-center space-y-2">
                 <h3 className="text-lg sm:text-xl font-bold text-primary mb-2">
                   {t(item.nameKey)}
                 </h3>
-                <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">
-                  {t(item.descriptionKey)}
+                <p className="text-xl font-bold text-primary">
+                  {t(item.price)}
                 </p>
               </CardContent>
             </Card>

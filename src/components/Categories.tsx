@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { categories } from "@/data/menuData";
 import { useLanguage } from "@/contexts/LanguageContext";
-
+import {Badge} from "@/components/ui/badge"
 interface CategoriesProps {
   selectedCategory: string;
   onCategorySelect: (categoryId: string) => void;
@@ -29,13 +29,20 @@ const Categories = ({ selectedCategory, onCategorySelect }: CategoriesProps) => 
               }`}
               onClick={() => onCategorySelect(category.id)}
             >
-              <CardContent className="flex flex-col items-center justify-center p-3 sm:p-4 md:p-5 text-center">
-                <div className="text-2xl sm:text-3xl md:text-4xl mb-1 sm:mb-2">
-                  {category.emoji}
+              <CardContent className="flex flex-col items-center justify-center p-1 sm:p-4 md:p-1 text-center">
+                <div className="relative">
+                  <img
+                    src={category.image}
+                    alt={t(category.nameKey)}
+                    className="w-full h-30 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-2 left-2">
+                    <Badge className="bg-accent text-accent-foreground font-semibold">
+                      {t(category.id)}
+                    </Badge>
+                  </div>
                 </div>
-                <h3 className="text-xs sm:text-sm md:text-base font-semibold">
-                  {t(category.nameKey)}
-                </h3>
               </CardContent>
             </Card>
           ))}

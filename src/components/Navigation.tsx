@@ -38,7 +38,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
             <Coffee className="text-primary" size={24} />
-            <span className="text-xl font-bold text-primary">NOUR</span>
+            <span className="text-xl font-bold text-primary">CRAFT</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -107,7 +107,7 @@ const Navigation = () => {
                     <div className="flex flex-col space-y-6 mt-8">
                       <Link to="/" className="flex items-center space-x-reverse space-x-2">
                         <Coffee className="text-primary" size={24} />
-                        <span className="text-xl font-bold text-primary">NOUR</span>
+                        <span className="text-xl font-bold text-primary">CRAFT</span>
                       </Link>
                       
                       <div className="flex flex-col space-y-4">
@@ -187,7 +187,7 @@ const Navigation = () => {
                     <div className="flex flex-col space-y-6 mt-8">
                       <Link to="/" className="flex items-center space-x-2">
                         <Coffee className="text-primary" size={24} />
-                        <span className="text-xl font-bold text-primary">NOUR</span>
+                        <span className="text-xl font-bold text-primary">CRAFT</span>
                       </Link>
                       
                       <div className="flex flex-col space-y-4">
