@@ -6,7 +6,7 @@ export const translations = {
     contact: "Contact",
     
     // Landing Page
-    landingTitle: "Welcome to NOUR",
+    landingTitle: "Welcome to CRAFT",
     landingSlogan: "Where every cup tells a story",
     landingSubtitle: "Discover our carefully crafted beverages and delicious treats in a cozy atmosphere that feels like home.",
     exploreMenu: "Explore Our Menu",
@@ -34,7 +34,7 @@ export const translations = {
     noItemsAvailable: "No items available in this category yet.",
     
     // Footer
-    footerTitle: "NOUR",
+    footerTitle: "CRAFT",
     footerDescription: "A cozy coffee shop where every cup is brewed with passion, warmth, and a touch of comfort",
     followUs: "Follow Us",
     contactInformation: "Contact Information",
@@ -68,7 +68,7 @@ export const translations = {
     contact: "Contact",
     
     // Landing Page
-    landingTitle: "Bienvenue chez NOUR",
+    landingTitle: "Bienvenue chez CRAFT",
     landingSlogan: "Où chaque tasse raconte une histoire",
     landingSubtitle: "Découvrez nos boissons soigneusement préparées et nos délicieuses friandises dans une atmosphère chaleureuse qui vous fait sentir chez vous.",
     exploreMenu: "Découvrir Notre Menu",
@@ -96,7 +96,7 @@ export const translations = {
     noItemsAvailable: "Aucun article disponible dans cette catégorie pour le moment.",
     
     // Footer
-    footerTitle: "NOUR",
+    footerTitle: "CRAFT",
     footerDescription: "Un café confortable où chaque tasse est préparée avec passion, chaleur et une touche de confort",
     followUs: "Suivez-nous",
     contactInformation: "Informations de Contact",
@@ -130,7 +130,7 @@ export const translations = {
     contact: "اتصل بنا",
     
     // Landing Page
-    landingTitle: "مرحباً بكم في NOUR",
+    landingTitle: "مرحباً بكم في CRAFT",
     landingSlogan: "حيث كل كوب يحكي قصة",
     landingSubtitle: "اكتشف مشروباتنا المحضرة بعناية والحلويات اللذيذة في جو دافئ يشعرك بالمنزل.",
     exploreMenu: "استكشف قائمتنا",
@@ -158,7 +158,7 @@ export const translations = {
     noItemsAvailable: "لا توجد عناصر متاحة في هذه الفئة بعد.",
     
     // Footer
-    footerTitle: "NOUR",
+    footerTitle: "CRAFT",
     footerDescription: "مقهى مريح حيث يتم تحضير كل كوب بشغف وحرارة ولمسة من الراحة",
     followUs: "تابعنا",
     contactInformation: "معلومات الاتصال",
