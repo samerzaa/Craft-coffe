@@ -16,7 +16,8 @@ const MenuItems = ({ selectedCategory }: MenuItemsProps) => {
       juices: ` ${t("juices")}`,
       desserts: ` ${t("desserts")}`,
       drinks: ` ${t("drinks")}`,
-      milkshake: ` ${t("milkshake")}`
+      milkshake: ` ${t("milkshake")}`,
+      smoothie: ` ${t("smoothie")}`
     };
     return categoryMap[category] || t("menu");
   };

@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Coffee } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import heroImage from "@/assets/coffee-hero.jpg";
+import heroImage from "@/assets/coffee-hero.webp";
 
 const Landing = () => {
   const { t } = useLanguage();

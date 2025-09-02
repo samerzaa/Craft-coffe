@@ -1,10 +1,9 @@
 // category images
 import orangeJuiceImg from "@/assets/orange-juice.jpg";
-import tiramisuImg from "@/assets/tiramisu.jpg";
-import brownieImg from "@/assets/brownie.jpg";
-import drinksImg from "@/assets/drinks.jpg";
-import cappuccinoimg from "@/assets/cappuccino.jpg"
-import milkshakeimg from "@/assets/milkshake.jpg"
+import smoothieimg from "@/assets/smoothie.webp";
+import drinksImg from "@/assets/drinks.webp";
+import cappuccinoimg from "@/assets/cappuccino.webp"
+import milkshakeimg from "@/assets/milkshake.webp"
 // coffee images
 import express from "@/assets/coffee/express.webp"
 import cappucin from "@/assets/coffee/cappucin.webp"
@@ -30,12 +29,17 @@ import nutella from "@/assets/milkshake/nutella.webp"
 import noreo from "@/assets/milkshake/n_oreo.webp"
 import speculoos from "@/assets/milkshake/speculoos.webp"
 import snickers from "@/assets/milkshake/snickers.webp"
+// smoothie images
+import ananas from "@/assets/smoothie/ananas.webp"
+import fruits_rouges from "@/assets/smoothie/fruits_rouges.webp"
+import kiwi from "@/assets/smoothie/kiwi.webp"
+import peche from "@/assets/smoothie/peche.webp"
 export interface MenuItem {
   id: number;
   nameKey: string;
   price: string;
   image: string;
-  category: 'coffee' | 'drinks' | 'desserts' | 'juices' | 'milkshake';
+  category: 'coffee' | 'drinks' |  'juices' | 'milkshake' | 'smoothie';
 }
 
 export const menuData: MenuItem[] = [
@@ -164,7 +168,7 @@ export const menuData: MenuItem[] = [
     image: banana,
     category: "juices"
   },
-    // MilkShake
+  // MilkShake
   {
     id: 18,
     nameKey: "Nutella",
@@ -195,20 +199,34 @@ export const menuData: MenuItem[] = [
   },
 
 
-  // Desserts
+  // Smoothies
   {
     id: 22,
-    nameKey: "tiramisu",
-    price: "12.000 DT",
-    image: tiramisuImg,
-    category: "desserts"
+    nameKey: "ananas",
+    price: "8.000 DT",
+    image: ananas,
+    category: "smoothie"
   },
   {
     id: 23,
-    nameKey: "brownie",
-    price: "15.000 DT",
-    image: brownieImg,
-    category: "desserts"
+    nameKey: "red fruits",
+    price: "8.000 DT",
+    image: fruits_rouges,
+    category: "smoothie"
+  },
+  {
+    id: 24,
+    nameKey: "kiwi",
+    price: "9.000 DT",
+    image: kiwi,
+    category: "smoothie"
+  },
+  {
+    id: 25,
+    nameKey: "peach",
+    price: "9.000 DT",
+    image: peche,
+    category: "smoothie"
   }
 ];
 
@@ -217,6 +235,6 @@ export const categories = [
   { id: 'drinks', nameKey: 'Drinks', image: drinksImg },
   { id: 'juices', nameKey: 'Juices', image:  orangeJuiceImg },
   { id: 'milkshake', nameKey: 'MilkShake', image: milkshakeimg },
-  { id: 'desserts', nameKey: 'Desserts', image: tiramisuImg }
+  { id: 'smoothie', nameKey: 'Smoothie', image: smoothieimg }
   
 ];
