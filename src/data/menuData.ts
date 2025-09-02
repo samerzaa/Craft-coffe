@@ -4,6 +4,7 @@ import tiramisuImg from "@/assets/tiramisu.jpg";
 import brownieImg from "@/assets/brownie.jpg";
 import drinksImg from "@/assets/drinks.jpg";
 import cappuccinoimg from "@/assets/cappuccino.jpg"
+import milkshakeimg from "@/assets/milkshake.jpg"
 // coffee images
 import express from "@/assets/coffee/express.webp"
 import cappucin from "@/assets/coffee/cappucin.webp"
@@ -24,12 +25,17 @@ import orange from "@/assets/juice/orange.webp"
 import limon from "@/assets/juice/citron.webp"
 import strawberry from "@/assets/juice/fraise.webp"
 import banana from "@/assets/juice/banane.webp"
+// milkshake images
+import nutella from "@/assets/milkshake/nutella.webp"
+import noreo from "@/assets/milkshake/n_oreo.webp"
+import speculoos from "@/assets/milkshake/speculoos.webp"
+import snickers from "@/assets/milkshake/snickers.webp"
 export interface MenuItem {
   id: number;
   nameKey: string;
   price: string;
   image: string;
-  category: 'coffee' | 'drinks' | 'desserts' | 'juices';
+  category: 'coffee' | 'drinks' | 'desserts' | 'juices' | 'milkshake';
 }
 
 export const menuData: MenuItem[] = [
@@ -140,7 +146,7 @@ export const menuData: MenuItem[] = [
   {
     id: 15,
     nameKey: "limon",
-    price: "10.000 DT",
+    price: "7.000 DT",
     image: limon,
     category: "juices"
   },
@@ -158,18 +164,47 @@ export const menuData: MenuItem[] = [
     image: banana,
     category: "juices"
   },
+    // MilkShake
+  {
+    id: 18,
+    nameKey: "Nutella",
+    price: "7.000 DT",
+    image: nutella,
+    category: "milkshake"
+  },    
+  {
+    id: 19,
+    nameKey: "Nutella Oreo",
+    price: "8.000 DT",
+    image: noreo,
+    category: "milkshake"
+  },
+  {
+    id: 20,
+    nameKey: "Biscoff",
+    price: "8.000 DT",
+    image: speculoos,
+    category: "milkshake"
+  },
+  {
+    id: 21,
+    nameKey: "Snickers",
+    price: "9.000 DT",
+    image: snickers,
+    category: "milkshake"
+  },
 
 
   // Desserts
   {
-    id: 18,
+    id: 22,
     nameKey: "tiramisu",
     price: "12.000 DT",
     image: tiramisuImg,
     category: "desserts"
   },
   {
-    id: 19,
+    id: 23,
     nameKey: "brownie",
     price: "15.000 DT",
     image: brownieImg,
@@ -178,9 +213,10 @@ export const menuData: MenuItem[] = [
 ];
 
 export const categories = [
-  { id: 'coffee', nameKey: 'Coffee', icon: '☕', image: cappuccinoimg },
-  { id: 'drinks', nameKey: 'Drinks', icon: '💨', image:drinksImg },
-  { id: 'juices', nameKey: 'Juices', icon: '🥤', image:  orangeJuiceImg },
-  { id: 'desserts', nameKey: 'Desserts', icon: '🍰', image:tiramisuImg }
+  { id: 'coffee', nameKey: 'Coffee', image: cappuccinoimg },
+  { id: 'drinks', nameKey: 'Drinks', image: drinksImg },
+  { id: 'juices', nameKey: 'Juices', image:  orangeJuiceImg },
+  { id: 'milkshake', nameKey: 'MilkShake', image: milkshakeimg },
+  { id: 'desserts', nameKey: 'Desserts', image: tiramisuImg }
   
 ];

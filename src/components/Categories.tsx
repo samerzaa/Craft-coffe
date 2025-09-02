@@ -43,12 +43,12 @@ const Categories = ({ selectedCategory, onCategorySelect }: CategoriesProps) => 
               }`}
               onClick={() => onCategorySelect(category.id)}
             >
-              <CardContent className="flex flex-col items-center justify-center p-1 sm:p-3 md:p-2 text-center">
-                <div className="relative">
+              <CardContent className="p-1 relative">
+                <div className="relative w-full h-40 sm:h-48 md:h-56 lg:h-64">
                   <img
                     src={category.image}
                     alt={t(category.nameKey)}
-                    className="w-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     loading="lazy"
                   />
                   <div className="absolute top-2 left-2">

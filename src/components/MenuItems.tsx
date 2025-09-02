@@ -12,10 +12,11 @@ const MenuItems = ({ selectedCategory }: MenuItemsProps) => {
   
   const getCategoryTitle = (category: string) => {
     const categoryMap: { [key: string]: string } = {
-      coffee: `☕ ${t("coffee")}`,
-      juices: `🥤 ${t("juices")}`,
-      desserts: `🍰 ${t("desserts")}`,
-      drinks: `💨 ${t("drinks")}`
+      coffee: ` ${t("coffee")}`,
+      juices: ` ${t("juices")}`,
+      desserts: ` ${t("desserts")}`,
+      drinks: ` ${t("drinks")}`,
+      milkshake: ` ${t("milkshake")}`
     };
     return categoryMap[category] || t("menu");
   };
@@ -42,7 +43,7 @@ const MenuItems = ({ selectedCategory }: MenuItemsProps) => {
                 <img
                   src={item.image}
                   alt={t(item.nameKey)}
-                  className="w-full h-30 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-32 sm:h-48 object-contain group-hover:scale-110 transition-transform duration-300"
                   loading="lazy"
                 />
               </div>

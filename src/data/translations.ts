@@ -16,6 +16,7 @@ export const translations = {
     juices: "Juices",
     desserts: "Desserts",
     drinks: "Drinks",
+    milkshake: "MilkShake",
     
     // Menu Items
     cappuccino: "Cappuccino",
@@ -78,6 +79,7 @@ export const translations = {
     juices: "Jus",
     desserts: "Desserts",
     drinks: "Boissons",
+    milkshake: "MilkShake",
     
     // Menu Items
     cappuccino: "Cappuccino",
@@ -140,6 +142,7 @@ export const translations = {
     juices: "العصائر",
     desserts: "الحلويات",
     drinks: "المشروبات",
+    milkshake: "MilkShake",
     
     // Menu Items
     cappuccino: "كابتشينو",
