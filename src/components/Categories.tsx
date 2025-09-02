@@ -31,7 +31,7 @@ const Categories = ({ selectedCategory, onCategorySelect }: CategoriesProps) => 
         <div className="relative">
           <div
             ref={scrollRef}
-            className="grid grid-flow-col auto-cols-[20%] sm:auto-cols-[40%] md:auto-cols-[15%] gap-2 sm:gap-3 md:gap-3 mx-auto overflow-x-auto snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+            className="grid grid-flow-col auto-cols-[30%] sm:auto-cols-[30%] md:auto-cols-[25%] gap-2 sm:gap-3 md:gap-3 mx-auto overflow-x-auto snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
           >
           {categories.map((category) => (
             <Card
@@ -43,12 +43,12 @@ const Categories = ({ selectedCategory, onCategorySelect }: CategoriesProps) => 
               }`}
               onClick={() => onCategorySelect(category.id)}
             >
-              <CardContent className="flex flex-col items-center justify-center p-0 sm:p-3 md:p-2 text-center">
+              <CardContent className="flex flex-col items-center justify-center p-1 sm:p-3 md:p-2 text-center">
                 <div className="relative">
                   <img
                     src={category.image}
                     alt={t(category.nameKey)}
-                    className="w-full h-24 sm:h-36 object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full object-cover group-hover:scale-110 transition-transform duration-300"
                     loading="lazy"
                   />
                   <div className="absolute top-2 left-2">
