@@ -2,6 +2,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { categories } from "@/data/menuData";
 import { useLanguage } from "@/contexts/LanguageContext";
 import {Badge} from "@/components/ui/badge"
+import { Button } from "@/components/ui/button";
+import { useRef } from "react";
 interface CategoriesProps {
   selectedCategory: string;
   onCategorySelect: (categoryId: string) => void;
@@ -9,6 +11,14 @@ interface CategoriesProps {
 
 const Categories = ({ selectedCategory, onCategorySelect }: CategoriesProps) => {
   const { t } = useLanguage();
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  const scrollByAmount = (direction: "left" | "right") => {
+    const container = scrollRef.current;
+    if (!container) return;
+    const amount = Math.floor((container.clientWidth || 0) * 0.9);
+    container.scrollBy({ left: direction === "left" ? -amount : amount, behavior: "smooth" });
+  };
   return (
     <section id="categories" className="py-8 bg-gradient-cream">
       <div className="container mx-auto px-4">
@@ -18,23 +28,27 @@ const Categories = ({ selectedCategory, onCategorySelect }: CategoriesProps) => 
           </h2>
         </div>
         
-        <div className="grid grid-cols-3 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto">
+        <div className="relative">
+          <div
+            ref={scrollRef}
+            className="grid grid-flow-col auto-cols-[20%] sm:auto-cols-[40%] md:auto-cols-[15%] gap-2 sm:gap-3 md:gap-3 mx-auto overflow-x-auto snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          >
           {categories.map((category) => (
             <Card
               key={category.id}
-              className={`cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-warm ${
+              className={`cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-warm snap-start ${
                 selectedCategory === category.id
                   ? 'bg-primary text-primary-foreground shadow-coffee'
                   : 'bg-card hover:bg-secondary/50'
               }`}
               onClick={() => onCategorySelect(category.id)}
             >
-              <CardContent className="flex flex-col items-center justify-center p-1 sm:p-4 md:p-1 text-center">
+              <CardContent className="flex flex-col items-center justify-center p-0 sm:p-3 md:p-2 text-center">
                 <div className="relative">
                   <img
                     src={category.image}
                     alt={t(category.nameKey)}
-                    className="w-full h-30 sm:h-48 object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-24 sm:h-36 object-cover group-hover:scale-110 transition-transform duration-300"
                     loading="lazy"
                   />
                   <div className="absolute top-2 left-2">
@@ -46,6 +60,24 @@ const Categories = ({ selectedCategory, onCategorySelect }: CategoriesProps) => 
               </CardContent>
             </Card>
           ))}
+          </div>
+
+          <div className="hidden md:block">
+            <Button
+              variant="secondary"
+              className="absolute left-0 top-1/2 -translate-y-1/2 z-10 rounded-full shadow-md"
+              onClick={() => scrollByAmount("left")}
+            >
+              ‹
+            </Button>
+            <Button
+              variant="secondary"
+              className="absolute right-0 top-1/2 -translate-y-1/2 z-10 rounded-full shadow-md"
+              onClick={() => scrollByAmount("right")}
+            >
+              ›
+            </Button>
+          </div>
         </div>
       </div>
     </section>
