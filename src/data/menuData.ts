@@ -1,8 +1,10 @@
+// category images
 import orangeJuiceImg from "@/assets/orange-juice.jpg";
 import tiramisuImg from "@/assets/tiramisu.jpg";
 import brownieImg from "@/assets/brownie.jpg";
 import drinksImg from "@/assets/drinks.jpg";
 import cappuccinoimg from "@/assets/cappuccino.jpg"
+// coffee images
 import express from "@/assets/coffee/express.webp"
 import cappucin from "@/assets/coffee/cappucin.webp"
 import direct from "@/assets/coffee/direct.webp"
@@ -12,12 +14,22 @@ import chocolat_lait from "@/assets/coffee/chocolat_lait.webp"
 import capsule from "@/assets/coffee/capsule.webp"
 import chocolatchaud from "@/assets/coffee/chocolat_chaud.webp"
 import americain from "@/assets/coffee/americain.webp"
+// drinks images
+import water from "@/assets/boisson/eau.webp"
+import soda from "@/assets/boisson/soda.webp"
+import big_soda from "@/assets/boisson/big_soda.webp"
+import energy from "@/assets/boisson/energetique.webp"
+// juices images
+import orange from "@/assets/juice/orange.webp"
+import limon from "@/assets/juice/citron.webp"
+import strawberry from "@/assets/juice/fraise.webp"
+import banana from "@/assets/juice/banane.webp"
 export interface MenuItem {
   id: number;
   nameKey: string;
   price: string;
   image: string;
-  category: 'coffee' | 'juices' | 'desserts' | 'drinks';
+  category: 'coffee' | 'drinks' | 'desserts' | 'juices';
 }
 
 export const menuData: MenuItem[] = [
@@ -86,26 +98,78 @@ export const menuData: MenuItem[] = [
     category: "coffee"
   },
 
+  //drinks
+  {
+    id: 10,
+    nameKey: "Water 1L",
+    price: "2.500 DT",
+    image: water,
+    category: "drinks"
+  },
+  {
+    id: 11,
+    nameKey: "Soda",
+    price: "3.500 DT",
+    image: soda,
+    category: "drinks"
+  },
+  {
+    id: 12,
+    nameKey: "Big Soda",
+    price: "4.000 DT",
+    image: big_soda,
+    category: "drinks"
+  },
+  {
+    id: 13,
+    nameKey: "Energy Drink",
+    price: "7.000 DT",
+    image: energy,
+    category: "drinks"
+  },
+
 
   // Juices
   {
-    id: 10,
-    nameKey: "orangeJuice",
+    id: 14,
+    nameKey: "Orange",
+    price: "7.000 DT",
+    image: orange,
+    category: "juices"
+  },    
+  {
+    id: 15,
+    nameKey: "limon",
     price: "10.000 DT",
-    image: orangeJuiceImg,
+    image: limon,
+    category: "juices"
+  },
+  {
+    id: 16,
+    nameKey: "Strawberry",
+    price: "8.000 DT",
+    image: strawberry,
+    category: "juices"
+  },
+  {
+    id: 17,
+    nameKey: "Banana",
+    price: "8.000 DT",
+    image: banana,
     category: "juices"
   },
 
+
   // Desserts
   {
-    id: 11,
+    id: 18,
     nameKey: "tiramisu",
     price: "12.000 DT",
     image: tiramisuImg,
     category: "desserts"
   },
   {
-    id: 12,
+    id: 19,
     nameKey: "brownie",
     price: "15.000 DT",
     image: brownieImg,
@@ -115,7 +179,8 @@ export const menuData: MenuItem[] = [
 
 export const categories = [
   { id: 'coffee', nameKey: 'Coffee', icon: '☕', image: cappuccinoimg },
+  { id: 'drinks', nameKey: 'Drinks', icon: '💨', image:drinksImg },
   { id: 'juices', nameKey: 'Juices', icon: '🥤', image:  orangeJuiceImg },
-  { id: 'desserts', nameKey: 'Desserts', icon: '🍰', image:tiramisuImg },
-  { id: 'drinks', nameKey: 'Drinks', icon: '💨', image:drinksImg }
+  { id: 'desserts', nameKey: 'Desserts', icon: '🍰', image:tiramisuImg }
+  
 ];
