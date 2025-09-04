@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { Coffee } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
-import heroImage from "@/assets/coffee-hero.webp";
 
 const Landing = () => {
   const { t } = useLanguage();
@@ -11,7 +10,7 @@ const Landing = () => {
       {/* Hero Background */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        style={{ backgroundImage: `url(${"/assets/coffee-hero.webp"})` }}
       >
         <div className="absolute inset-0 bg-gradient-hero opacity-80"></div>
       </div>

@@ -1,39 +1,3 @@
-// category images
-import orangeJuiceImg from "@/assets/orange-juice.jpg";
-import smoothieimg from "@/assets/smoothie.webp";
-import drinksImg from "@/assets/drinks.webp";
-import cappuccinoimg from "@/assets/cappuccino.webp"
-import milkshakeimg from "@/assets/milkshake.webp"
-// coffee images
-import express from "@/assets/coffee/express.webp"
-import cappucin from "@/assets/coffee/cappucin.webp"
-import direct from "@/assets/coffee/direct.webp"
-import cappuccino from "@/assets/coffee/cappuccino.webp"
-import truc from "@/assets/coffee/truc.webp"
-import chocolat_lait from "@/assets/coffee/chocolat_lait.webp"
-import capsule from "@/assets/coffee/capsule.webp"
-import chocolatchaud from "@/assets/coffee/chocolat_chaud.webp"
-import americain from "@/assets/coffee/americain.webp"
-// drinks images
-import water from "@/assets/boisson/eau.webp"
-import soda from "@/assets/boisson/soda.webp"
-import big_soda from "@/assets/boisson/big_soda.webp"
-import energy from "@/assets/boisson/energetique.webp"
-// juices images
-import orange from "@/assets/juice/orange.webp"
-import limon from "@/assets/juice/citron.webp"
-import strawberry from "@/assets/juice/fraise.webp"
-import banana from "@/assets/juice/banane.webp"
-// milkshake images
-import nutella from "@/assets/milkshake/nutella.webp"
-import noreo from "@/assets/milkshake/n_oreo.webp"
-import speculoos from "@/assets/milkshake/speculoos.webp"
-import snickers from "@/assets/milkshake/snickers.webp"
-// smoothie images
-import ananas from "@/assets/smoothie/ananas.webp"
-import fruits_rouges from "@/assets/smoothie/fruits_rouges.webp"
-import kiwi from "@/assets/smoothie/kiwi.webp"
-import peche from "@/assets/smoothie/peche.webp"
 export interface MenuItem {
   id: number;
   nameKey: string;
@@ -48,63 +12,63 @@ export const menuData: MenuItem[] = [
     id: 1,
     nameKey: "Express",
     price: "3.000 DT",
-    image: express,
+    image: "/assets/coffee/express.webp",
     category: "coffee"
   },
   {
     id: 2,
     nameKey: "Cappucin",
     price: "3.500 DT",
-    image: cappucin,
+    image: "/assets/coffee/cappucin.webp",
     category: "coffee"
   },
   {
     id: 3,
     nameKey: "Americain",
     price: "3.500 DT",
-    image: americain,
+    image: "/assets/coffee/americain.webp",
     category: "coffee"
   },
   {
     id: 4,
     nameKey: "Direct",
     price: "5.000 DT",
-    image: direct,
+    image: "/assets/coffee/direct.webp",
     category: "coffee"
   },
     {
     id: 5,
     nameKey: "Cappuccino",
     price: "6.000 DT",
-    image: cappuccino,
+    image: "/assets/coffee/cappuccino.webp",
     category: "coffee"
   },
     {
     id: 6,
     nameKey: "Cafe Truc",
     price: "5.000 DT",
-    image: truc,
+    image: "/assets/coffee/truc.webp",
     category: "coffee"
   },
     {
     id: 7,
     nameKey: "Chocolat au lait",
     price: "4.000 DT",
-    image: chocolat_lait,
+    image: "/assets/coffee/chocolat_lait.webp",
     category: "coffee"
   },
   {
     id: 8,
     nameKey: "Chocolat Chaud",
     price: "7.000 DT",
-    image: chocolatchaud,
+    image: "/assets/coffee/chocolat_chaud.webp",
     category: "coffee"
   },
     {
     id: 9,
     nameKey: "Capsule",
     price: "5.000 DT",
-    image: capsule,
+    image: "/assets/coffee/capsule.webp",
     category: "coffee"
   },
 
@@ -113,28 +77,28 @@ export const menuData: MenuItem[] = [
     id: 10,
     nameKey: "Water 1L",
     price: "2.500 DT",
-    image: water,
+    image: "/assets/boisson/eau.webp",
     category: "drinks"
   },
   {
     id: 11,
     nameKey: "Soda",
     price: "3.500 DT",
-    image: soda,
+    image: "/assets/boisson/soda.webp",
     category: "drinks"
   },
   {
     id: 12,
     nameKey: "Big Soda",
     price: "4.000 DT",
-    image: big_soda,
+    image: "/assets/boisson/big_soda.webp",
     category: "drinks"
   },
   {
     id: 13,
     nameKey: "Energy Drink",
     price: "7.000 DT",
-    image: energy,
+    image: "/assets/boisson/energetique.webp",
     category: "drinks"
   },
 
@@ -144,28 +108,28 @@ export const menuData: MenuItem[] = [
     id: 14,
     nameKey: "Orange",
     price: "7.000 DT",
-    image: orange,
+    image: "/assets/juice/orange.webp",
     category: "juices"
   },    
   {
     id: 15,
     nameKey: "limon",
     price: "7.000 DT",
-    image: limon,
+    image: "/assets/juice/citron.webp",
     category: "juices"
   },
   {
     id: 16,
     nameKey: "Strawberry",
     price: "8.000 DT",
-    image: strawberry,
+    image: "/assets/juice/fraise.webp",
     category: "juices"
   },
   {
     id: 17,
     nameKey: "Banana",
     price: "8.000 DT",
-    image: banana,
+    image: "/assets/juice/banane.webp",
     category: "juices"
   },
   // MilkShake
@@ -173,28 +137,28 @@ export const menuData: MenuItem[] = [
     id: 18,
     nameKey: "Nutella",
     price: "7.000 DT",
-    image: nutella,
+    image: "/assets/milkshake/nutella.webp",
     category: "milkshake"
   },    
   {
     id: 19,
     nameKey: "Nutella Oreo",
     price: "8.000 DT",
-    image: noreo,
+    image: "/assets/milkshake/n_oreo.webp",
     category: "milkshake"
   },
   {
     id: 20,
     nameKey: "Biscoff",
     price: "8.000 DT",
-    image: speculoos,
+    image: "/assets/milkshake/speculoos.webp",
     category: "milkshake"
   },
   {
     id: 21,
     nameKey: "Snickers",
     price: "9.000 DT",
-    image: snickers,
+    image: "/assets/milkshake/snickers.webp",
     category: "milkshake"
   },
 
@@ -204,37 +168,37 @@ export const menuData: MenuItem[] = [
     id: 22,
     nameKey: "ananas",
     price: "8.000 DT",
-    image: ananas,
+    image: "/assets/smoothie/ananas.webp",
     category: "smoothie"
   },
   {
     id: 23,
     nameKey: "red fruits",
     price: "8.000 DT",
-    image: fruits_rouges,
+    image: "/assets/smoothie/fruits_rouges.webp",
     category: "smoothie"
   },
   {
     id: 24,
     nameKey: "kiwi",
     price: "9.000 DT",
-    image: kiwi,
+    image: "/assets/smoothie/kiwi.webp",
     category: "smoothie"
   },
   {
     id: 25,
     nameKey: "peach",
     price: "9.000 DT",
-    image: peche,
+    image: "/assets/smoothie/peche.webp",
     category: "smoothie"
   }
 ];
 
 export const categories = [
-  { id: 'coffee', nameKey: 'Coffee', image: cappuccinoimg },
-  { id: 'drinks', nameKey: 'Drinks', image: drinksImg },
-  { id: 'juices', nameKey: 'Juices', image:  orangeJuiceImg },
-  { id: 'milkshake', nameKey: 'MilkShake', image: milkshakeimg },
-  { id: 'smoothie', nameKey: 'Smoothie', image: smoothieimg }
+  { id: 'coffee', nameKey: 'Coffee', image: "/assets/cappuccino.webp" },
+  { id: 'drinks', nameKey: 'Drinks', image: "/assets/drinks.webp" },
+  { id: 'juices', nameKey: 'Juices', image:  "/assets/orange_juice.jpg" },
+  { id: 'milkshake', nameKey: 'MilkShake', image: "/assets/milkshake.webp" },
+  { id: 'smoothie', nameKey: 'Smoothie', image: "/assets/smoothie.webp" }
   
 ];

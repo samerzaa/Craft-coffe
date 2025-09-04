@@ -6,9 +6,6 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram , faFacebook } from "@fortawesome/free-brands-svg-icons";
-import uk from "@/assets/uk.webp";
-import france from "@/assets/france.webp";
-import tunisia from "@/assets/tunisia.webp";
 
 const Navigation = () => {
   const { selectedLanguage, setSelectedLanguage, languages, getCurrentLanguage, t } = useLanguage();
@@ -21,13 +18,13 @@ const Navigation = () => {
   const getFlagIcon = () => {
     switch (languages.find(lang => lang.code === selectedLanguage)?.code) {
       case 'en':
-        return uk;
+        return "/assets/uk.webp";
       case 'fr':
-        return france;
+        return "/assets/france.webp";
       case 'ar':
-        return tunisia;
+        return "/assets/tunisia.webp";
       default:
-        return uk;
+        return "/assets/uk.webp";
     }
   };
 
