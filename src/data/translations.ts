@@ -1,3 +1,5 @@
+import test from "node:test";
+
 export const translations = {
   en: {
     // Navigation
@@ -18,6 +20,9 @@ export const translations = {
     drinks: "Drinks",
     milkshake: "MilkShake",
     smoothie: "Smoothie",
+    mojito: "Mojito",
+    cocktail: "Cocktail",
+    tea: "Tea",
     
     // Menu Items
     cappuccino: "Cappuccino",
@@ -82,6 +87,9 @@ export const translations = {
     drinks: "Boissons",
     milkshake: "MilkShake",
     smoothie: "Smoothie",
+    mojito: "Mojito",
+    cocktail: "Cocktail",
+    tea: "Thé",
     
     // Menu Items
     cappuccino: "Cappuccino",
@@ -146,6 +154,9 @@ export const translations = {
     drinks: "المشروبات",
     milkshake: "MilkShake",
     smoothie: "Smoothie",
+    mojito: "Mojito",
+    cocktail: "Cocktail",
+    tea: "الشاي",
     
     // Menu Items
     cappuccino: "كابتشينو",

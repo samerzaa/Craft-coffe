@@ -3,7 +3,7 @@ export interface MenuItem {
   nameKey: string;
   price: string;
   image: string;
-  category: 'coffee' | 'drinks' |  'juices' | 'milkshake' | 'smoothie';
+  category: 'coffee' | 'drinks' |  'juices' | 'milkshake' | 'smoothie' | 'mojito' | 'cocktail'| 'tea';
 }
 
 export const menuData: MenuItem[] = [
@@ -191,7 +191,101 @@ export const menuData: MenuItem[] = [
     price: "9.000 DT",
     image: "/assets/smoothie/peche.webp",
     category: "smoothie"
-  }
+  },
+    // mojito
+  {
+    id: 26,
+    nameKey: "virgin",
+    price: "7.000 DT",
+    image: "/assets/mojito/virgin.webp",
+    category: "mojito"
+  },
+  {
+    id: 27,
+    nameKey: "blue mojito",
+    price: "8.000 DT",
+    image: "/assets/mojito/blue.webp",
+    category: "mojito"
+  },
+  {
+    id: 28,
+    nameKey: "red mojito",
+    price: "8.000 DT",
+    image: "/assets/mojito/red.webp",
+    category: "mojito"
+  },
+  {
+    id: 29,
+    nameKey: "energy mojito",
+    price: "10.000 DT",
+    image: "/assets/mojito/m_energetique.webp",
+    category: "mojito"
+  },
+  //cocktail
+  {
+    id: 30,
+    nameKey: "duo",
+    price: "9.000 DT",
+    image: "/assets/cocktail/duo.webp",
+    category: "cocktail"
+  },
+  {
+    id: 31,
+    nameKey: "pina colada",
+    price: "9.000 DT",
+    image: "/assets/cocktail/pina_colada.webp",
+    category: "cocktail"
+  },
+  {
+    id: 32,
+    nameKey: "banane dattes",
+    price: "10.000 DT",
+    image: "/assets/cocktail/banane_dattes.webp",
+    category: "cocktail"
+  },
+  {
+    id: 33,
+    nameKey: "jwejem",
+    price: "10.000 DT",
+    image: "/assets/cocktail/jwejem.webp",
+    category: "cocktail"
+  },
+  {
+    id: 34,
+    nameKey: "special",
+    price: "12.000 DT",
+    image: "/assets/cocktail/special.webp",
+    category: "cocktail"
+  },
+  //tea
+  {
+    id: 35,
+    nameKey: "Thé à la menthe",
+    price: "3.500 DT",
+    image: "/assets/the/menthe.webp",
+    category: "tea"
+  },
+  {
+    id: 36,
+    nameKey: "Thé infusion",
+    price: "4.000 DT",
+    image: "/assets/the/infusion.webp",
+    category: "tea"
+  },
+  {
+    id: 37,
+    nameKey: "Thé aux amandes",
+    price: "7.000 DT",
+    image: "/assets/the/amandes.webp",
+    category: "tea"
+  },
+  {
+    id: 38,
+    nameKey: "Thé aux pingions",
+    price: "8.500 DT",
+    image: "/assets/the/pingion.webp",
+    category: "tea"
+  },
 ];
 
 export const categories = [
@@ -199,6 +293,8 @@ export const categories = [
   { id: 'drinks', nameKey: 'Drinks', image: "/assets/drinks.webp" },
   { id: 'juices', nameKey: 'Juices', image:  "/assets/orange_juice.jpg" },
   { id: 'milkshake', nameKey: 'MilkShake', image: "/assets/milkshake.webp" },
-  { id: 'smoothie', nameKey: 'Smoothie', image: "/assets/smoothie.webp" }
-  
+  { id: 'smoothie', nameKey: 'Smoothie', image: "/assets/smoothie.webp" },
+  { id: 'mojito', nameKey: 'Mojito', image: "/assets/mojito.webp" },
+  { id: 'cocktail', nameKey: 'Cocktail', image: "/assets/cocktail1.webp" },
+  { id: 'tea', nameKey: 'Tea', image: "/assets/tea.webp" }
 ];

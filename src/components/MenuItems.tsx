@@ -17,7 +17,10 @@ const MenuItems = ({ selectedCategory }: MenuItemsProps) => {
       desserts: ` ${t("desserts")}`,
       drinks: ` ${t("drinks")}`,
       milkshake: ` ${t("milkshake")}`,
-      smoothie: ` ${t("smoothie")}`
+      smoothie: ` ${t("smoothie")}`,
+      mojito: ` ${t("mojito")}`,
+      cocktail: ` ${t("cocktail")}`,
+      tea: ` ${t("tea")}`,
     };
     return categoryMap[category] || t("menu");
   };
