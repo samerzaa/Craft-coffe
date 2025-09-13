@@ -48,7 +48,7 @@ const Categories = ({ selectedCategory, onCategorySelect }: CategoriesProps) => 
                   <img
                     src={category.image}
                     alt={t(category.nameKey)}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300 rounded-xl"
                     loading="lazy"
                   />
                   <div className="absolute top-2 left-2">
