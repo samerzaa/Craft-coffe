@@ -35,7 +35,7 @@ const Categories = ({ selectedCategory, onCategorySelect }: CategoriesProps) => 
           >
           {categories.map((category) => (
             <Card
-              key={category.id}
+              key={category.id} 
               className={`cursor-pointer transition-all duration-300 hover:scale-105 hover:shadow-warm snap-start ${
                 selectedCategory === category.id
                   ? 'bg-primary text-primary-foreground shadow-coffee'

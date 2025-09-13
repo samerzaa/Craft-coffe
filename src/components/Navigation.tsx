@@ -34,7 +34,7 @@ const Navigation = () => {
         <div className={`flex items-center justify-between h-16 ${selectedLanguage === 'ar' ? 'flex-row-reverse' : ''}`}>
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-            <Coffee className="text-primary" size={24} />
+            <img src="/assets/coffeecup.webp" alt="logo" className="w-10" />
             <span className="text-xl font-bold text-primary">CRAFT</span>
           </Link>
 
