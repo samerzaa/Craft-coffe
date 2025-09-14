@@ -8,7 +8,11 @@ interface MenuItemsProps {
 
 const MenuItems = ({ selectedCategory }: MenuItemsProps) => {
   const { t } = useLanguage();
-  const filteredItems = menuData.filter(item => item.category === selectedCategory);
+  
+  // Handle special case for coffee-tea combination
+  const filteredItems = selectedCategory === 'coffee-tea' 
+    ? menuData.filter(item => item.category === 'coffee' || item.category === 'tea')
+    : menuData.filter(item => item.category === selectedCategory);
   
   const getCategoryTitle = (category: string) => {
     const categoryMap: { [key: string]: string } = {
@@ -21,6 +25,7 @@ const MenuItems = ({ selectedCategory }: MenuItemsProps) => {
       mojito: ` ${t("mojito")}`,
       cocktail: ` ${t("cocktail")}`,
       tea: ` ${t("tea")}`,
+      'coffee-tea': `${t("coffee")} & ${t("tea")}`,
     };
     return categoryMap[category] || t("menu");
   };
