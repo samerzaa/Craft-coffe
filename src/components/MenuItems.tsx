@@ -4,15 +4,12 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 interface MenuItemsProps {
   selectedCategory: string;
+  onBreakfastItemClick?: (item: MenuItem) => void;
 }
 
-const MenuItems = ({ selectedCategory }: MenuItemsProps) => {
+const MenuItems = ({ selectedCategory, onBreakfastItemClick }: MenuItemsProps) => {
   const { t } = useLanguage();
-  
-  // Handle special case for coffee-tea combination
-  const filteredItems = selectedCategory === 'coffee-tea' 
-    ? menuData.filter(item => item.category === 'coffee' || item.category === 'tea')
-    : menuData.filter(item => item.category === selectedCategory);
+  const filteredItems = menuData.filter(item => item.category === selectedCategory);
   
   const getCategoryTitle = (category: string) => {
     const categoryMap: { [key: string]: string } = {
@@ -25,7 +22,7 @@ const MenuItems = ({ selectedCategory }: MenuItemsProps) => {
       mojito: ` ${t("mojito")}`,
       cocktail: ` ${t("cocktail")}`,
       tea: ` ${t("tea")}`,
-      'coffee-tea': `${t("coffee")} & ${t("tea")}`,
+      breakfast: ` ${t("breakfast")}`,
     };
     return categoryMap[category] || t("menu");
   };
@@ -47,6 +44,11 @@ const MenuItems = ({ selectedCategory }: MenuItemsProps) => {
             <Card 
               key={item.id} 
               className="overflow-hidden hover:shadow-warm transition-all duration-300 hover:scale-105 group"
+              onClick={() => {
+                if (item.category === 'breakfast' && onBreakfastItemClick) {
+                  onBreakfastItemClick(item);
+                }
+              }}
             >
               <div className="relative">
                 <img

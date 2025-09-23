@@ -35,8 +35,8 @@ const Categories = ({ selectedCategory, onCategorySelect }: CategoriesProps) => 
     if (selectedIcon === 'salt') {
       return categories.filter(category => category.id === 'juices' || category.id === 'milkshake' || category.id === 'smoothie' || category.id === 'mojito' || category.id === 'cocktail');
     }
-    if (selectedIcon === 'breakfast') {
-      return categories.filter(category => category.id === 'juices' || category.id === 'milkshake' || category.id === 'smoothie' || category.id === 'mojito' || category.id === 'cocktail');
+    if (selectedIcon === 'petitdej') {
+      return categories.filter(category => category.id === 'breakfast');
     }
     return categories; // Show all categories if no icon is selected
   };
@@ -99,9 +99,9 @@ const Categories = ({ selectedCategory, onCategorySelect }: CategoriesProps) => 
             {/* Icon 5 */}
             <div 
               className={`flex-shrink-0 w-16 h-16 flex items-center justify-center cursor-pointer ${
-                selectedIcon === 'breakfast' ? 'ring-1 ring-primary ring-opacity-50' : ''
+                selectedIcon === 'petitdej' ? 'ring-1 ring-primary ring-opacity-50' : ''
               }`}
-              onClick={() => handleIconClick(selectedIcon === 'breakfast' ? null : 'breakfast')}
+              onClick={() => handleIconClick(selectedIcon === 'petitdej' ? null : 'petitdej')}
             >
               <img src="/assets/icon5.webp" alt="icon5" className="w-full h-full object-cover"/>
             </div>

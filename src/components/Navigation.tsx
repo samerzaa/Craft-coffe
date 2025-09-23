@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Coffee, Menu} from "lucide-react";
+import { Menu} from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -103,7 +103,7 @@ const Navigation = () => {
                   <SheetContent side="left" className="w-80">
                     <div className="flex flex-col space-y-6 mt-8">
                       <Link to="/" className="flex items-center space-x-reverse space-x-2">
-                        <Coffee className="text-primary" size={24} />
+                        <img src="/assets/coffeecup.webp" alt="logo" className="w-10" />
                         <span className="text-xl font-bold text-primary">CRAFT</span>
                       </Link>
                       
@@ -183,7 +183,7 @@ const Navigation = () => {
                   <SheetContent side="right" className="w-80">
                     <div className="flex flex-col space-y-6 mt-8">
                       <Link to="/" className="flex items-center space-x-2">
-                        <Coffee className="text-primary" size={24} />
+                        <img src="/assets/coffeecup.webp" alt="logo" className="w-10" />
                         <span className="text-xl font-bold text-primary">CRAFT</span>
                       </Link>
                       

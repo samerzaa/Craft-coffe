@@ -1,3 +1,4 @@
+import { Description } from "@radix-ui/react-toast";
 import test from "node:test";
 
 export const translations = {
@@ -39,6 +40,8 @@ export const translations = {
     tiramisuDesc: "Classic Italian dessert with coffee and mascarpone",
     craftedWithLove: "Crafted with love and served with passion",
     noItemsAvailable: "No items available in this category yet.",
+    ingredients: "Ingredients",
+    price: "Price",
     
     // Footer
     footerTitle: "CRAFT",
@@ -106,6 +109,8 @@ export const translations = {
     tiramisuDesc: "Dessert italien classique au café et mascarpone",
     craftedWithLove: "Préparé avec amour et servi avec passion",
     noItemsAvailable: "Aucun article disponible dans cette catégorie pour le moment.",
+    ingredients: "Ingrédients",
+    price: "Prix",
     
     // Footer
     footerTitle: "CRAFT",
@@ -173,6 +178,8 @@ export const translations = {
     tiramisuDesc: "حلوى إيطالية كلاسيكية بالقهوة والماسكاربوني",
     craftedWithLove: "محضر بحب ومقدم بشغف",
     noItemsAvailable: "لا توجد عناصر متاحة في هذه الفئة بعد.",
+    ingredients: "المكونات",
+    price: "السعر",
     
     // Footer
     footerTitle: "CRAFT",

@@ -3,7 +3,8 @@ export interface MenuItem {
   nameKey: string;
   price: string;
   image: string;
-  category: 'coffee' | 'drinks' |  'juices' | 'milkshake' | 'smoothie' | 'mojito' | 'cocktail'| 'tea';
+  category: 'coffee' | 'drinks' |  'juices' | 'milkshake' | 'smoothie' | 'mojito' | 'cocktail'| 'tea' |'breakfast';
+  description: string;
 }
 
 export const menuData: MenuItem[] = [
@@ -13,63 +14,72 @@ export const menuData: MenuItem[] = [
     nameKey: "Express",
     price: "3.000 DT",
     image: "/assets/coffee/express.webp",
-    category: "coffee"
+    category: "coffee",
+    description: "",
   },
   {
     id: 2,
     nameKey: "Cappucin",
     price: "3.500 DT",
     image: "/assets/coffee/cappucin.webp",
-    category: "coffee"
+    category: "coffee",
+    description: "",
   },
   {
     id: 3,
     nameKey: "Americain",
     price: "3.500 DT",
     image: "/assets/coffee/americain.webp",
-    category: "coffee"
+    category: "coffee",
+    description: "",
   },
   {
     id: 4,
     nameKey: "Direct",
     price: "5.000 DT",
     image: "/assets/coffee/direct.webp",
-    category: "coffee"
+    category: "coffee",
+    description: "",
   },
     {
     id: 5,
     nameKey: "Cappuccino",
     price: "6.000 DT",
     image: "/assets/coffee/cappuccino.webp",
-    category: "coffee"
+    category: "coffee",
+    description: "",
   },
     {
     id: 6,
     nameKey: "Cafe Truc",
     price: "5.000 DT",
     image: "/assets/coffee/truc.webp",
-    category: "coffee"
+    category: "coffee",
+    description: "",
   },
     {
     id: 7,
     nameKey: "Chocolat au lait",
     price: "4.000 DT",
     image: "/assets/coffee/chocolat_lait.webp",
-    category: "coffee"
+    category: "coffee",
+    description: "",
   },
   {
     id: 8,
     nameKey: "Chocolat Chaud",
     price: "7.000 DT",
     image: "/assets/coffee/chocolat_chaud.webp",
-    category: "coffee"
+    category: "coffee",
+    description: "",
   },
     {
     id: 9,
     nameKey: "Capsule",
     price: "5.000 DT",
     image: "/assets/coffee/capsule.webp",
-    category: "coffee"
+    category: "coffee",
+    description: "",
   },
 
   //drinks
@@ -78,28 +88,32 @@ export const menuData: MenuItem[] = [
     nameKey: "Water 1L",
     price: "2.500 DT",
     image: "/assets/boisson/eau.webp",
-    category: "drinks"
+    category: "drinks",
+    description: "",
   },
   {
     id: 11,
     nameKey: "Soda",
     price: "3.500 DT",
     image: "/assets/boisson/soda.webp",
-    category: "drinks"
+    category: "drinks",
+    description: "",
   },
   {
     id: 12,
     nameKey: "Big Soda",
     price: "4.000 DT",
     image: "/assets/boisson/big_soda.webp",
-    category: "drinks"
+    category: "drinks",
+    description: "",
   },
   {
     id: 13,
     nameKey: "Energy Drink",
     price: "7.000 DT",
     image: "/assets/boisson/energetique.webp",
-    category: "drinks"
+    category: "drinks",
+    description: "",
   },
 
 
@@ -109,28 +123,32 @@ export const menuData: MenuItem[] = [
     nameKey: "Orange",
     price: "7.000 DT",
     image: "/assets/juice/orange.webp",
-    category: "juices"
+    category: "juices",
+    description: "",
   },    
   {
     id: 15,
     nameKey: "limon",
     price: "7.000 DT",
     image: "/assets/juice/citron.webp",
-    category: "juices"
+    category: "juices",
+    description: "",
   },
   {
     id: 16,
     nameKey: "Strawberry",
     price: "8.000 DT",
     image: "/assets/juice/fraise.webp",
-    category: "juices"
+    category: "juices",
+    description: "",
   },
   {
     id: 17,
     nameKey: "Banana",
     price: "8.000 DT",
     image: "/assets/juice/banane.webp",
-    category: "juices"
+    category: "juices",
+    description: "",
   },
   // MilkShake
   {
@@ -138,28 +156,32 @@ export const menuData: MenuItem[] = [
     nameKey: "Nutella",
     price: "7.000 DT",
     image: "/assets/milkshake/nutella.webp",
-    category: "milkshake"
+    category: "milkshake",
+    description: "",
   },    
   {
     id: 19,
     nameKey: "Nutella Oreo",
     price: "8.000 DT",
     image: "/assets/milkshake/n_oreo.webp",
-    category: "milkshake"
+    category: "milkshake",
+    description: "",
   },
   {
     id: 20,
     nameKey: "Biscoff",
     price: "8.000 DT",
     image: "/assets/milkshake/speculoos.webp",
-    category: "milkshake"
+    category: "milkshake",
+    description: "",
   },
   {
     id: 21,
     nameKey: "Snickers",
     price: "9.000 DT",
     image: "/assets/milkshake/snickers.webp",
-    category: "milkshake"
+    category: "milkshake",
+    description: "",
   },
 
 
@@ -169,28 +191,32 @@ export const menuData: MenuItem[] = [
     nameKey: "ananas",
     price: "8.000 DT",
     image: "/assets/smoothie/ananas.webp",
-    category: "smoothie"
+    category: "smoothie",
+    description: "",
   },
   {
     id: 23,
     nameKey: "red fruits",
     price: "8.000 DT",
     image: "/assets/smoothie/fruits_rouges.webp",
-    category: "smoothie"
+    category: "smoothie",
+    description: "",
   },
   {
     id: 24,
     nameKey: "kiwi",
     price: "9.000 DT",
     image: "/assets/smoothie/kiwi.webp",
-    category: "smoothie"
+    category: "smoothie",
+    description: "",
   },
   {
     id: 25,
     nameKey: "peach",
     price: "9.000 DT",
     image: "/assets/smoothie/peche.webp",
-    category: "smoothie"
+    category: "smoothie",
+    description: "",
   },
     // mojito
   {
@@ -198,28 +224,32 @@ export const menuData: MenuItem[] = [
     nameKey: "virgin",
     price: "7.000 DT",
     image: "/assets/mojito/virgin.webp",
-    category: "mojito"
+    category: "mojito",
+    description: "",
   },
   {
     id: 27,
     nameKey: "blue mojito",
     price: "8.000 DT",
     image: "/assets/mojito/blue.webp",
-    category: "mojito"
+    category: "mojito",
+    description: "",
   },
   {
     id: 28,
     nameKey: "red mojito",
     price: "8.000 DT",
     image: "/assets/mojito/red.webp",
-    category: "mojito"
+    category: "mojito",
+    description: "",
   },
   {
     id: 29,
     nameKey: "energy mojito",
     price: "10.000 DT",
     image: "/assets/mojito/m_energetique.webp",
-    category: "mojito"
+    category: "mojito",
+    description: "",
   },
   //cocktail
   {
@@ -227,35 +257,40 @@ export const menuData: MenuItem[] = [
     nameKey: "duo",
     price: "9.000 DT",
     image: "/assets/cocktail/duo.webp",
-    category: "cocktail"
+    category: "cocktail",
+    description: "",
   },
   {
     id: 31,
     nameKey: "pina colada",
     price: "9.000 DT",
     image: "/assets/cocktail/pina_colada.webp",
-    category: "cocktail"
+    category: "cocktail",
+    description: "",
   },
   {
     id: 32,
     nameKey: "banane dattes",
     price: "10.000 DT",
     image: "/assets/cocktail/banane_dattes.webp",
-    category: "cocktail"
+    category: "cocktail",
+    description: "",
   },
   {
     id: 33,
     nameKey: "jwejem",
     price: "10.000 DT",
     image: "/assets/cocktail/jwejem.webp",
-    category: "cocktail"
+    category: "cocktail",
+    description: "",
   },
   {
     id: 34,
     nameKey: "special",
     price: "12.000 DT",
     image: "/assets/cocktail/special.webp",
-    category: "cocktail"
+    category: "cocktail",
+    description: "",
   },
   //tea
   {
@@ -263,28 +298,68 @@ export const menuData: MenuItem[] = [
     nameKey: "Thé à la menthe",
     price: "3.500 DT",
     image: "/assets/the/menthe.webp",
-    category: "tea"
+    category: "tea",
+    description: "",
   },
   {
     id: 36,
     nameKey: "Thé infusion",
     price: "4.000 DT",
     image: "/assets/the/infusion.webp",
-    category: "tea"
+    category: "tea",
+    description: "",
   },
   {
     id: 37,
     nameKey: "Thé aux amandes",
     price: "7.000 DT",
     image: "/assets/the/amandes.webp",
-    category: "tea"
+    category: "tea",
+    description: "",
   },
   {
     id: 38,
     nameKey: "Thé aux pingions",
     price: "8.500 DT",
     image: "/assets/the/pingion.webp",
-    category: "tea"
+    category: "tea",
+    description: "",
+  },
+  //breakfast
+  {
+    id: 39,
+    nameKey: "Matinal",
+    price: "8.000 DT",
+    image: "/assets/breakfast/matinal.webp",
+    category: "breakfast",
+    description: "coffee of choice, croissant, juice, water 0.5L",
+  },
+  {
+    id: 40,
+    nameKey: "Kids",
+    price: "10.000 DT",
+    image: "/assets/breakfast/kids.webp",
+    category: "breakfast",
+    description: "juice kids, milk of choclate, mini-pancakes, grandor, water 0.5L",
+
+  },
+  {
+    id: 41,
+    nameKey: "Salty",
+    price: "12.000 DT",
+    image: "/assets/breakfast/salty.webp",
+    category: "breakfast",
+    description: "salty croissant, toasts, harissa and mayo, omelette or crepe, salad, juice, water 0.5L",
+
+  },
+  {
+    id: 42,
+    nameKey: "Tasty",
+    price: "12.000 DT",
+    image: "/assets/breakfast/tasty.webp",
+    category: "breakfast",
+    description: "salad of fruits, honey, toasts, mini-pancakes, coffee of choice, croissant, juice, water 0.5L",
+
   },
 ];
 
@@ -296,5 +371,6 @@ export const categories = [
   { id: 'smoothie', nameKey: 'Smoothie', image: "/assets/smoothie.webp" },
   { id: 'mojito', nameKey: 'Mojito', image: "/assets/mojito.webp" },
   { id: 'cocktail', nameKey: 'Cocktail', image: "/assets/cocktail1.webp" },
-  { id: 'tea', nameKey: 'Tea', image: "/assets/tea.webp" }
+  { id: 'tea', nameKey: 'Tea', image: "/assets/tea.webp" },
+  { id: 'breakfast', nameKey: 'Breakfast', image: "/assets/breakfast.webp" },
 ];

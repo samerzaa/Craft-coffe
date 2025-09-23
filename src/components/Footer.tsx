@@ -1,4 +1,4 @@
-import { Coffee, Clock, Phone, Mail, X, Instagram, Facebook } from "lucide-react";
+import { Clock, Phone, Mail, X, Instagram, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useState } from "react";
@@ -17,7 +17,7 @@ const Footer = () => {
           {/* About Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2 mb-6">
-              <Coffee size={24} />
+              <img src="/assets/coffeecup.webp" alt="logo" className="w-10" />
               <span className="text-2xl font-bold">CRAFT</span>
             </div>
             <p>{t("footerDescription")}</p>
