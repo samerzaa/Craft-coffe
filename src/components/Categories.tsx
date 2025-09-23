@@ -124,7 +124,7 @@ const Categories = ({ selectedCategory, onCategorySelect }: CategoriesProps) => 
               onClick={() => onCategorySelect(category.id)}
             >
               <CardContent className="p-0 relative">
-                <div className="relative w-full h-40 sm:h-48 md:h-56 lg:h-64">
+                <div className="relative w-full h-32 sm:h-40 md:h-48 lg:h-64">
                   <img
                     src={category.image}
                     alt={t(category.nameKey)}
