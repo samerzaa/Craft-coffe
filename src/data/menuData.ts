@@ -3,8 +3,9 @@ export interface MenuItem {
   nameKey: string;
   price: string;
   image: string;
-  category: 'coffee' | 'drinks' |  'juices' | 'milkshake' | 'smoothie' | 'mojito' | 'cocktail'| 'tea' |'breakfast';
+  category: 'coffee' | 'drinks' |  'juices' | 'milkshake' | 'smoothie' | 'mojito' | 'cocktail' | 'tea' | 'breakfast' | 'icecream' | 'desserts' | 'waffles' | 'crepes' | 'pancake' | 'omelette' | 'tacos' | 'screpe';
   description: string;
+  details: string;
 }
 
 export const menuData: MenuItem[] = [
@@ -16,6 +17,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/coffee/express.webp",
     category: "coffee",
     description: "",
+    details: "",
   },
   {
     id: 2,
@@ -24,6 +26,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/coffee/cappucin.webp",
     category: "coffee",
     description: "",
+    details: "",
   },
   {
     id: 3,
@@ -32,6 +35,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/coffee/americain.webp",
     category: "coffee",
     description: "",
+    details: "",
   },
   {
     id: 4,
@@ -40,6 +44,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/coffee/direct.webp",
     category: "coffee",
     description: "",
+    details: "",
   },
     {
     id: 5,
@@ -48,6 +53,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/coffee/cappuccino.webp",
     category: "coffee",
     description: "",
+    details: "",
   },
     {
     id: 6,
@@ -56,6 +62,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/coffee/truc.webp",
     category: "coffee",
     description: "",
+    details: "",
   },
     {
     id: 7,
@@ -64,6 +71,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/coffee/chocolat_lait.webp",
     category: "coffee",
     description: "",
+    details: "",
   },
   {
     id: 8,
@@ -72,6 +80,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/coffee/chocolat_chaud.webp",
     category: "coffee",
     description: "",
+    details: "",
   },
     {
     id: 9,
@@ -80,6 +89,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/coffee/capsule.webp",
     category: "coffee",
     description: "",
+    details: "",
   },
 
   //drinks
@@ -90,6 +100,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/boisson/eau.webp",
     category: "drinks",
     description: "",
+    details: "",
   },
   {
     id: 11,
@@ -98,6 +109,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/boisson/soda.webp",
     category: "drinks",
     description: "",
+    details: "",
   },
   {
     id: 12,
@@ -106,6 +118,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/boisson/big_soda.webp",
     category: "drinks",
     description: "",
+    details: "",
   },
   {
     id: 13,
@@ -114,6 +127,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/boisson/energetique.webp",
     category: "drinks",
     description: "",
+    details: "",
   },
 
 
@@ -125,6 +139,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/juice/orange.webp",
     category: "juices",
     description: "",
+    details: "",
   },    
   {
     id: 15,
@@ -133,6 +148,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/juice/citron.webp",
     category: "juices",
     description: "",
+    details: "",
   },
   {
     id: 16,
@@ -141,6 +157,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/juice/fraise.webp",
     category: "juices",
     description: "",
+    details: "",
   },
   {
     id: 17,
@@ -149,6 +166,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/juice/banane.webp",
     category: "juices",
     description: "",
+    details: "",
   },
   // MilkShake
   {
@@ -158,6 +176,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/milkshake/nutella.webp",
     category: "milkshake",
     description: "",
+    details: "",
   },    
   {
     id: 19,
@@ -166,6 +185,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/milkshake/n_oreo.webp",
     category: "milkshake",
     description: "",
+    details: "",
   },
   {
     id: 20,
@@ -174,6 +194,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/milkshake/speculoos.webp",
     category: "milkshake",
     description: "",
+    details: "",
   },
   {
     id: 21,
@@ -182,6 +203,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/milkshake/snickers.webp",
     category: "milkshake",
     description: "",
+    details: "",
   },
 
 
@@ -193,6 +215,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/smoothie/ananas.webp",
     category: "smoothie",
     description: "",
+    details: "",
   },
   {
     id: 23,
@@ -201,6 +224,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/smoothie/fruits_rouges.webp",
     category: "smoothie",
     description: "",
+    details: "",
   },
   {
     id: 24,
@@ -209,6 +233,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/smoothie/kiwi.webp",
     category: "smoothie",
     description: "",
+    details: "",
   },
   {
     id: 25,
@@ -217,6 +242,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/smoothie/peche.webp",
     category: "smoothie",
     description: "",
+    details: "",
   },
     // mojito
   {
@@ -226,6 +252,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/mojito/virgin.webp",
     category: "mojito",
     description: "",
+    details: "",
   },
   {
     id: 27,
@@ -234,6 +261,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/mojito/blue.webp",
     category: "mojito",
     description: "",
+    details: "",
   },
   {
     id: 28,
@@ -242,6 +270,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/mojito/red.webp",
     category: "mojito",
     description: "",
+    details: "",
   },
   {
     id: 29,
@@ -250,6 +279,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/mojito/m_energetique.webp",
     category: "mojito",
     description: "",
+    details: "",
   },
   //cocktail
   {
@@ -259,6 +289,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/cocktail/duo.webp",
     category: "cocktail",
     description: "",
+    details: "",
   },
   {
     id: 31,
@@ -267,6 +298,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/cocktail/pina_colada.webp",
     category: "cocktail",
     description: "",
+    details: "",
   },
   {
     id: 32,
@@ -275,6 +307,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/cocktail/banane_dattes.webp",
     category: "cocktail",
     description: "",
+    details: "",
   },
   {
     id: 33,
@@ -283,6 +316,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/cocktail/jwejem.webp",
     category: "cocktail",
     description: "",
+    details: "",
   },
   {
     id: 34,
@@ -291,6 +325,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/cocktail/special.webp",
     category: "cocktail",
     description: "",
+    details: "",
   },
   //tea
   {
@@ -300,6 +335,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/the/menthe.webp",
     category: "tea",
     description: "",
+    details: "",
   },
   {
     id: 36,
@@ -308,6 +344,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/the/infusion.webp",
     category: "tea",
     description: "",
+    details: "",
   },
   {
     id: 37,
@@ -316,6 +353,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/the/amandes.webp",
     category: "tea",
     description: "",
+    details: "",
   },
   {
     id: 38,
@@ -324,6 +362,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/the/pingion.webp",
     category: "tea",
     description: "",
+    details: "",
   },
   //breakfast
   {
@@ -333,6 +372,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/breakfast/matinal.webp",
     category: "breakfast",
     description: "coffee of choice, croissant, juice, water 0.5L",
+    details: "Click For More Details...",
   },
   {
     id: 40,
@@ -341,6 +381,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/breakfast/kids.webp",
     category: "breakfast",
     description: "juice kids, milk of choclate, mini-pancakes, grandor, water 0.5L",
+    details: "Click For More Details...",
 
   },
   {
@@ -350,6 +391,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/breakfast/salty.webp",
     category: "breakfast",
     description: "salty croissant, toasts, harissa and mayo, omelette or crepe, salad, juice, water 0.5L",
+    details: "Click For More Details...",
 
   },
   {
@@ -359,7 +401,277 @@ export const menuData: MenuItem[] = [
     image: "/assets/breakfast/tasty.webp",
     category: "breakfast",
     description: "salad of fruits, honey, toasts, mini-pancakes, coffee of choice, croissant, juice, water 0.5L",
+    details: "Click For More Details...",
 
+  },
+  //icecream
+  {
+    id: 43,
+    nameKey: "2 Balls",
+    price: "4.000 DT",
+    image: "/assets/glace/glace.webp",
+    category: "icecream",
+    description: "choclate, vanilla, strawberry, biscuit, mango, lemon, pistachio",
+    details: "",
+  },
+  {
+    id: 44,
+    nameKey: "3 Balls",
+    price: "6.000 DT",
+    image: "/assets/glace/glace.webp",
+    category: "icecream",
+    description: "choclate, vanilla, strawberry, biscuit, mango, lemon, pistachio",
+    details: "",
+  },
+  {
+    id: 45,
+    nameKey: "Special",
+    price: "8.000 DT",
+    image: "/assets/glace/special.webp",
+    category: "icecream",
+    description: "3 Balls of choice, cookies, chantilly, syrup (chocolate, caramel, strawberry)",
+    details: "",
+  },
+  //desserts
+  {
+    id: 46,
+    nameKey: "Fondant Chocolat",
+    price: "9.000 DT",
+    image: "/assets/desserts/fondant.webp",
+    category: "desserts",
+    description: "",
+    details: "",
+  },
+  {
+    id: 47,
+    nameKey: "Chesse cake",
+    price: "12.000 DT",
+    image: "/assets/desserts/cheesecake.webp",
+    category: "desserts",
+    description: "",
+    details: "",
+  },
+  //waffles
+  {
+    id: 48,
+    nameKey: "Nutella",
+    price: "9.000 DT",
+    image: "/assets/gauffre/nutella.webp",
+    category: "waffles",
+    description: "",
+    details: "",
+  },
+  {
+    id: 49,
+    nameKey: "Nutella banana",
+    price: "11.000 DT",
+    image: "/assets/gauffre/nutella_banane.webp",
+    category: "waffles",
+    description: "",
+    details: "",
+  },
+  {
+    id: 50,
+    nameKey: "Speculoos",
+    price: "11.000 DT",
+    image: "/assets/gauffre/speculoos.webp",
+    category: "waffles",
+    description: "",
+    details: "",
+  },
+  {
+    id: 51,
+    nameKey: "Nutella oreo",
+    price: "11.000 DT",
+    image: "/assets/gauffre/nutella_oreo.webp",
+    category: "waffles",
+    description: "",
+    details: "",
+  },
+  {
+    id: 52,
+    nameKey: "Nutella Fruits secs",
+    price: "12.000 DT",
+    image: "/assets/gauffre/nutella_fruits.webp",
+    category: "waffles",
+    description: "",
+    details: "",
+  },
+  //crepes
+  {
+    id: 53,
+    nameKey: "Nutella",
+    price: "8.000 DT",
+    image: "/assets/crepe/nutella.webp",
+    category: "crepes",
+    description: "",
+    details: "",
+  },
+  {
+    id: 54,
+    nameKey: "Nutella Oreo",
+    price: "10.000 DT",
+    image: "/assets/crepe/nutella_oreo.webp",
+    category: "crepes",
+    description: "",
+    details: "",
+  },
+  {
+    id: 55,
+    nameKey: "Nutella Banana",
+    price: "10.000 DT",
+    image: "/assets/crepe/nutella_banane.webp",
+    category: "crepes",
+    description: "",
+    details: "",
+  },
+  {
+    id: 56,
+    nameKey: "Nutella Brownies",
+    price: "10.000 DT",
+    image: "/assets/crepe/nutella_brownies.webp",
+    category: "crepes",
+    description: "",
+    details: "",
+  },
+  {
+    id: 57,
+    nameKey: "Speculoos",
+    price: "10.000 DT",
+    image: "/assets/crepe/speculoos.webp",
+    category: "crepes",
+    description: "",
+    details: "",
+  },
+  {
+    id: 58,
+    nameKey: "Nutella Fruits secs",
+    price: "11.000 DT",
+    image: "/assets/crepe/nutella_brownies.webp",
+    category: "crepes",
+    description: "",
+    details: "",
+  },
+  //pancake
+  {
+    id: 59,
+    nameKey: "Nutella",
+    price: "9.000 DT",
+    image: "/assets/pancake/nutella.webp",
+    category: "pancake",
+    description: "",
+    details: "",
+  },
+  {
+    id: 60,
+    nameKey: "Nutella Oreo",
+    price: "11.000 DT",
+    image: "/assets/pancake/nutella_oreo.webp",
+    category: "pancake",
+    description: "",
+    details: "",
+  },
+  {
+    id: 61,
+    nameKey: "Speculoos",
+    price: "11.000 DT",
+    image: "/assets/pancake/speculoos.webp",
+    category: "pancake",
+    description: "",
+    details: "",
+  },
+  {
+    id: 62,
+    nameKey: "Nutella fruits secs",
+    price: "12.000 DT",
+    image: "/assets/pancake/nutella_fruits.webp",
+    category: "pancake",
+    description: "",
+    details: "",
+  },
+  //omelette
+  {
+    id: 63,
+    nameKey: "Jambon Fromage",
+    price: "8.000 DT",
+    image: "/assets/omelette/jambon.webp",
+    category: "omelette",
+    description: "",
+    details: "",
+  },
+  {
+    id: 64,
+    nameKey: "Thon Fromage",
+    price: "9.000 DT",
+    image: "/assets/omelette/jambon.webp",
+    category: "omelette",
+    description: "",
+    details: "",
+  },
+  {
+    id: 65,
+    nameKey: "Thon Jambon Fromage",
+    price: "11.000 DT",
+    image: "/assets/omelette/jambon.webp",
+    category: "omelette",
+    description: "",
+    details: "",
+  },
+  //tacos
+  {
+    id: 66,
+    nameKey: "Jambon Fromage",
+    price: "9.000 DT",
+    image: "/assets/tacos/jambon.webp",
+    category: "tacos",
+    description: "",
+    details: "",
+  },
+  {
+    id: 67,
+    nameKey: "Thon Fromage",
+    price: "10.000 DT",
+    image: "/assets/tacos/jambon.webp",
+    category: "tacos",
+    description: "",
+    details: "",
+  },
+  {
+    id: 68,
+    nameKey: "Thon Jambon Fromage",
+    price: "12.000 DT",
+    image: "/assets/tacos/jambon.webp",
+    category: "tacos",
+    description: "",
+    details: "",
+  },
+  //screpe
+  {
+    id: 69,
+    nameKey: "Jambon Fromage",
+    price: "8.000 DT",
+    image: "/assets/screpe/jambon.webp",
+    category: "screpe",
+    description: "",
+    details: "",
+  },
+  {
+    id: 70,
+    nameKey: "Thon Fromage",
+    price: "9.000 DT",
+    image: "/assets/screpe/jambon.webp",
+    category: "screpe",
+    description: "",
+    details: "",
+  },
+  {
+    id: 71,
+    nameKey: "Thon Jambon Fromage",
+    price: "11.000 DT",
+    image: "/assets/screpe/jambon.webp",
+    category: "screpe",
+    description: "",
+    details: "",
   },
 ];
 
@@ -373,4 +685,12 @@ export const categories = [
   { id: 'cocktail', nameKey: 'Cocktail', image: "/assets/cocktail1.webp" },
   { id: 'tea', nameKey: 'Tea', image: "/assets/tea.webp" },
   { id: 'breakfast', nameKey: 'Breakfast', image: "/assets/breakfast.webp" },
+  { id: 'icecream', nameKey: 'IceCream', image: "/assets/icecream.webp" },
+  { id: 'desserts', nameKey: 'Desserts', image: "/assets/desserts.webp" },
+  { id: 'waffles', nameKey: 'Waffles', image: "/assets/waffles.webp" },
+  { id: 'crepes', nameKey: 'Crepes', image: "/assets/crepe.webp" },
+  { id: 'pancake', nameKey: 'Pancake', image: "/assets/pancake.webp" },
+  { id: 'omelette', nameKey: 'Omelette', image: "/assets/omelette.webp" },
+  { id: 'tacos', nameKey: 'Tacos', image: "/assets/tacos.webp" },
+  { id: 'screpe', nameKey: 'Crepe', image: "/assets/screpe.webp" },
 ];

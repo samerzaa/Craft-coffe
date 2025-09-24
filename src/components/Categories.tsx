@@ -30,10 +30,10 @@ const Categories = ({ selectedCategory, onCategorySelect }: CategoriesProps) => 
       return categories.filter(category => category.id === 'juices' || category.id === 'milkshake' || category.id === 'smoothie' || category.id === 'mojito' || category.id === 'cocktail');
     }
     if (selectedIcon === 'sweets') {
-      return categories.filter(category => category.id === 'juices' || category.id === 'milkshake' || category.id === 'smoothie' || category.id === 'mojito' || category.id === 'cocktail');
+      return categories.filter(category => category.id === 'icecream' || category.id === 'desserts' || category.id === 'waffles' || category.id === 'crepes' || category.id === 'pancake');
     }
     if (selectedIcon === 'salt') {
-      return categories.filter(category => category.id === 'juices' || category.id === 'milkshake' || category.id === 'smoothie' || category.id === 'mojito' || category.id === 'cocktail');
+      return categories.filter(category => category.id === 'omelette' || category.id === 'tacos' || category.id === 'screpe' );
     }
     if (selectedIcon === 'petitdej') {
       return categories.filter(category => category.id === 'breakfast');

@@ -23,6 +23,13 @@ const MenuItems = ({ selectedCategory, onBreakfastItemClick }: MenuItemsProps) =
       cocktail: ` ${t("cocktail")}`,
       tea: ` ${t("tea")}`,
       breakfast: ` ${t("breakfast")}`,
+      icecream: ` ${t("icecream")}`,
+      waffles: ` ${t("waffles")}`,
+      crepes: ` ${t("crepes")}`,
+      pancake: ` ${t("pancake")}`,
+      omelette: ` ${t("omelette")}`,
+      tacos: ` ${t("tacos")}`,
+      screpes: ` ${t("crepes")}`,
     };
     return categoryMap[category] || t("menu");
   };
@@ -65,6 +72,9 @@ const MenuItems = ({ selectedCategory, onBreakfastItemClick }: MenuItemsProps) =
                 </h3>
                 <p className="text-xl font-bold text-primary">
                   {t(item.price)}
+                </p>
+                <p className="text-xl font-light text-primary">
+                  {t(item.details)}
                 </p>
               </CardContent>
             </Card>
