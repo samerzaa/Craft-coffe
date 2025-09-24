@@ -372,7 +372,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/breakfast/matinal.webp",
     category: "breakfast",
     description: "coffee of choice, croissant, juice, water 0.5L",
-    details: "Click For More Details...",
+    details: "More Details...",
   },
   {
     id: 40,
@@ -381,7 +381,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/breakfast/kids.webp",
     category: "breakfast",
     description: "juice kids, milk of choclate, mini-pancakes, grandor, water 0.5L",
-    details: "Click For More Details...",
+    details: "More Details...",
 
   },
   {
@@ -391,7 +391,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/breakfast/salty.webp",
     category: "breakfast",
     description: "salty croissant, toasts, harissa and mayo, omelette or crepe, salad, juice, water 0.5L",
-    details: "Click For More Details...",
+    details: "More Details...",
 
   },
   {
@@ -401,7 +401,7 @@ export const menuData: MenuItem[] = [
     image: "/assets/breakfast/tasty.webp",
     category: "breakfast",
     description: "salad of fruits, honey, toasts, mini-pancakes, coffee of choice, croissant, juice, water 0.5L",
-    details: "Click For More Details...",
+    details: "More Details...",
 
   },
   //icecream

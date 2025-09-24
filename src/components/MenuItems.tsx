@@ -70,10 +70,10 @@ const MenuItems = ({ selectedCategory, onBreakfastItemClick }: MenuItemsProps) =
                 <h3 className="text-lg sm:text-xl font-bold text-primary mb-2">
                   {t(item.nameKey)}
                 </h3>
-                <p className="text-xl font-bold text-primary">
+                <p className="text-xl font-bold text-primary whitescpace-nowrap">
                   {t(item.price)}
                 </p>
-                <p className="text-xl font-light text-primary">
+                <p className="text-xl font-light text-primary whitescpace-nowrap">
                   {t(item.details)}
                 </p>
               </CardContent>
